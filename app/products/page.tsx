@@ -43,24 +43,42 @@ export default function ProductsPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
-        
+        <div className="absolute inset-0">
+          <Image
+            src="/products_yamahacfx.jpg"
+            alt="Yamaha CFX Grand Piano"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-background/80" />
+        </div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
+            <p
+              className="text-sm uppercase tracking-[0.3em] text-foreground mb-6 font-semibold"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
               Precision Crafted
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8">
+            <h1
+              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8"
+              style={{ textShadow: "0 4px 12px rgba(0,0,0,0.3)" }}
+            >
               Products
             </h1>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
-              Two ways to bring the DS Standard to your grand piano, plus partnership 
+            <p
+              className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed text-balance"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
+              Two ways to bring the DS Standard to your grand piano, plus partnership
               options for upright pianos.
             </p>
           </AnimatedSection>
@@ -102,22 +120,20 @@ export default function ProductsPage() {
             {grandPianoOptions.map((option, index) => (
               <AnimatedSection key={option.title} delay={index * 100}>
                 <div
-                  className={`relative p-8 md:p-12 rounded-3xl border h-full flex flex-col ${
-                    option.highlight
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border"
-                  }`}
+                  className={`relative p-8 md:p-12 rounded-3xl border h-full flex flex-col ${option.highlight
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background border-border"
+                    }`}
                 >
                   {option.highlight && (
                     <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary-foreground/20 text-primary-foreground text-xs font-medium">
                       Recommended
                     </div>
                   )}
-                  
+
                   <div className="mb-6">
-                    <p className={`text-sm uppercase tracking-wider mb-2 ${
-                      option.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
-                    }`}>
+                    <p className={`text-sm uppercase tracking-wider mb-2 ${option.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
+                      }`}>
                       Option {index + 1}
                     </p>
                     <h3 className="text-2xl font-bold mb-2">{option.title}</h3>
@@ -125,27 +141,26 @@ export default function ProductsPage() {
                       {option.description}
                     </p>
                   </div>
-                  
+
                   <div className="mb-8">
                     <p className="text-4xl font-bold">{option.price}</p>
                     <p className={`text-sm ${option.highlight ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                       plus shipping and installation
                     </p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8 flex-grow">
                     {option.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                          option.highlight ? "text-primary-foreground" : "text-primary"
-                        }`} />
+                        <Check className={`h-5 w-5 flex-shrink-0 mt-0.5 ${option.highlight ? "text-primary-foreground" : "text-primary"
+                          }`} />
                         <span className={option.highlight ? "text-primary-foreground/90" : "text-foreground"}>
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Button
                     asChild
                     variant={option.highlight ? "secondary" : "default"}
@@ -163,8 +178,8 @@ export default function ProductsPage() {
           <AnimatedSection delay={200}>
             <div className="mt-12 p-6 bg-muted rounded-2xl text-center">
               <p className="text-muted-foreground">
-                <strong className="text-foreground">Note:</strong> For both options, your action must 
-                first be sent to us in Titusville, PA for precise measurements. We provide 
+                <strong className="text-foreground">Note:</strong> For both options, your action must
+                first be sent to us in Titusville, PA for precise measurements. We provide
                 a shipping box for this purpose.
               </p>
             </div>
@@ -175,50 +190,42 @@ export default function ProductsPage() {
       {/* Engineering Section */}
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6">
-          <StickySection
-            stickyContent={
-              <AnimatedSection>
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/products_Bass-Treble-Engineering-1024x696.jpg"
-                    alt="DS Standard keyboard engineering"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </AnimatedSection>
-            }
-          >
-            <AnimatedSection>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium">
+          <AnimatedSection>
+            <div className="text-center mb-16 max-w-3xl mx-auto">
+              <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4">
                 Precision Engineering
               </p>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={100}>
               <h2 className="text-4xl font-bold tracking-tight text-foreground mb-6">
                 Built to Concert Standards
               </h2>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={200}>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Every DS Standard keyboard is precision-engineered using computer-driven 
+                  Every DS Standard keyboard is precision-engineered using computer-driven
                   manufacturing processes developed over three decades.
                 </p>
                 <p>
-                  The engineering is extremely accurate in all regards. The design of key 
-                  leveling alone is genius and has made what was once a complex adjustment 
+                  The engineering is extremely accurate in all regards. The design of key
+                  leveling alone is genius and has made what was once a complex adjustment
                   into a fifteen minute job.
                 </p>
                 <p>
-                  From the strength of the keys to the response of the action, every component 
+                  From the strength of the keys to the response of the action, every component
                   meets the highest standards for professional use.
                 </p>
               </div>
-            </AnimatedSection>
-          </StickySection>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl bg-card">
+              <Image
+                src="/products_Bass-Treble-Engineering-1024x696.jpg"
+                alt="DS Standard keyboard engineering details"
+                fill
+                className="object-contain p-4"
+              />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -227,13 +234,13 @@ export default function ProductsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <blockquote className="text-xl md:text-2xl leading-relaxed mb-8 text-center text-balance">
-              &ldquo;As the piano technician at Ohio University, I am pleased to add my voice 
-              to those praising the DS Standard keyboards. From a technical standpoint, these 
-              pianos are a joy to work on. The engineering is extremely accurate in all regards. 
+              &ldquo;As the piano technician at Ohio University, I am pleased to add my voice
+              to those praising the DS Standard keyboards. From a technical standpoint, these
+              pianos are a joy to work on. The engineering is extremely accurate in all regards.
               I am continually impressed with the precision and manufacture of all the components.&rdquo;
             </blockquote>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <div className="text-center">
               <p className="text-background font-semibold">Christopher D. Purdy R.P.T.</p>
@@ -254,7 +261,7 @@ export default function ProductsPage() {
                 DS Standard for Upright Pianos
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Through our partnership with Hailun, the only major acoustic piano manufacturer 
+                Through our partnership with Hailun, the only major acoustic piano manufacturer
                 offering DS keyboards
               </p>
             </div>
@@ -321,14 +328,14 @@ export default function ProductsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 text-center text-balance">
-              &ldquo;In 2014, the School of Music at the University of Central Oklahoma was 
-              extremely fortunate to acquire a DS6.0 keyboard action fitted to a Steinway D 
-              concert grand. Students with smaller hand sizes have since been able to 
-              unhesitatingly take on and confidently perform repertoire which would normally 
+              &ldquo;In 2014, the School of Music at the University of Central Oklahoma was
+              extremely fortunate to acquire a DS6.0 keyboard action fitted to a Steinway D
+              concert grand. Students with smaller hand sizes have since been able to
+              unhesitatingly take on and confidently perform repertoire which would normally
               have been off limits.&rdquo;
             </blockquote>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <div className="text-center">
               <p className="text-foreground font-semibold">Dr. David Forbat</p>
@@ -348,14 +355,14 @@ export default function ProductsPage() {
               Ready to Transform Your Piano?
             </h2>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <p className="text-xl text-muted-foreground mb-12 text-balance">
-              Contact us to discuss your needs and learn more about how we can help 
+              Contact us to discuss your needs and learn more about how we can help
               you achieve your full musical potential.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <a
@@ -375,7 +382,7 @@ export default function ProductsPage() {
               </a>
             </div>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={300}>
             <Button asChild size="lg" className="rounded-full px-8">
               <Link href="/contact_us">

@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/animated-section"
 import { StickySection } from "@/components/sticky-section"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, GraduationCap, Trophy, Building2, FlaskConical } from "lucide-react"
+import { ArrowRight, GraduationCap, Trophy, Building2, FlaskConical, Check } from "lucide-react"
 
 const activeUniversities = [
   { name: "SMU Meadows School of the Arts", location: "Dallas", contact: "Carol Leone – Chair and Professor of Piano" },
@@ -54,24 +54,33 @@ export default function ProjectsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-background/50 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-background/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
+            <p
+              className="text-sm uppercase tracking-[0.3em] text-foreground mb-6 font-semibold"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
               Our Impact
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8">
+            <h1
+              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8"
+              style={{ textShadow: "0 4px 12px rgba(0,0,0,0.3)" }}
+            >
               Our Projects
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
+            <p
+              className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed text-balance"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
               From university partnerships to international competitions, discover how
               the DS Standard Foundation is changing the landscape of piano education.
             </p>
@@ -151,26 +160,32 @@ export default function ProjectsPage() {
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <div className="bg-card rounded-3xl p-8 md:p-12 border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+            <div className="bg-card rounded-3xl p-8 md:p-12 border border-border max-w-2xl mx-auto text-center shadow-sm">
+              <h3 className="text-2xl font-semibold text-foreground mb-8">
                 Priority Given To Institutions With:
               </h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Support from the piano faculty</span>
+              <ul className="space-y-4 text-muted-foreground text-left inline-block mb-8">
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-lg">Support from the piano faculty</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Administrative backing</span>
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-lg">Administrative backing</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>A committed piano technician</span>
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-lg">A committed piano technician</span>
                 </li>
               </ul>
-              <div className="mt-8">
-                <Button asChild className="rounded-full">
+              <div>
+                <Button asChild size="lg" className="rounded-full px-8">
                   <Link href="/contact_us">
                     Apply for a Loan <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

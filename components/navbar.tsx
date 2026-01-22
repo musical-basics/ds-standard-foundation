@@ -33,9 +33,7 @@ export function Navbar() {
       <nav
         className={cn(
           "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out",
-          isScrolled
-            ? "bg-card/80 backdrop-blur-xl shadow-lg border border-border/50"
-            : "bg-transparent",
+          "bg-card/80 backdrop-blur-xl shadow-lg border border-border/50",
           "rounded-full px-2 py-2"
         )}
       >

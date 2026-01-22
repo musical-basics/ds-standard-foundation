@@ -63,32 +63,32 @@ export default function DonationsPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
             <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
               Support Our Mission
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8">
               Donations
             </h1>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
               We invite you to help us accomplish the mission of the DS Standard Foundation.
               Your contribution helps pianists worldwide achieve their full potential.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={300}>
             <div className="mt-12">
               <Button asChild size="lg" className="rounded-full px-8">
                 <a
-                  href="https://www.paypal.com/donate"
+                  href="https://www.paypal.com/donate?token=2qgGOfIl_L5nq4GEiaalo09tstRsyYbVQEQlkPX6K3oEeMFEzKXw_arunl7vd7idzQXKklfEjsGpgJss"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -106,9 +106,9 @@ export default function DonationsPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <AnimatedSection>
             <blockquote className="text-xl md:text-2xl leading-relaxed mb-6 text-balance">
-              &ldquo;The DS keyboard at St. Olaf College has been truly transformative for a 
-              significant number of gifted young artists, on campus and in our community. 
-              An invaluable resource for pianists returning to play following a playing-related 
+              &ldquo;The DS keyboard at St. Olaf College has been truly transformative for a
+              significant number of gifted young artists, on campus and in our community.
+              An invaluable resource for pianists returning to play following a playing-related
               injury... a beloved pedagogical resource.&rdquo;
             </blockquote>
             <p className="font-semibold">Dr. Kathryn Ananda-Owens</p>
@@ -217,28 +217,32 @@ export default function DonationsPage() {
                 &ldquo;Getting Larger Hands&rdquo;
               </h3>
             </AnimatedSection>
-            
-            <AnimatedSection delay={100}>
+
+            <AnimatedSection delay={200}>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I have actually experienced &ldquo;getting larger hands.&rdquo; Although 
-                  that sounds impossible, this was achieved by creating a 7/8-size keyboard 
+                  I have actually experienced &ldquo;getting larger hands.&rdquo; Although
+                  that sounds impossible, this was achieved by creating a 7/8-size keyboard
                   for my Steinway concert grand.
                 </p>
                 <p>
-                  I could finally use the correct fingerings. Wide, sweeping, left-hand 
-                  arpeggiated figures so prevalent in Romantic music become possible. There 
+                  I could finally use the correct fingerings. Wide, sweeping, left-hand
+                  arpeggiated figures so prevalent in Romantic music become possible. There
                   was an increase of power. It was easier to make large leaps accurately.
                 </p>
                 <p>
-                  I realize now, looking back, that most of the time I spent practicing was 
+                  I realize now, looking back, that most of the time I spent practicing was
                   used trying to overcome difficulties because of my hand-size.
                 </p>
                 <p className="text-foreground font-semibold">
-                  My great desire is for the small-handed pianists of the world to experience 
-                  the great joy of playing the piano when the struggle of overcoming the 
+                  My great desire is for the small-handed pianists of the world to experience
+                  the great joy of playing the piano when the struggle of overcoming the
                   limitations imposed by hand-size are gone.
                 </p>
+              </div>
+              <div className="mt-8">
+                <p className="text-foreground font-semibold">Christopher Donison</p>
+                <p className="text-muted-foreground">Pianist and Founder of the DS Standard</p>
               </div>
             </AnimatedSection>
           </StickySection>
@@ -268,31 +272,31 @@ export default function DonationsPage() {
                 Pain-Free Performance
               </h3>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={100}>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  The pain aspect of the 7/8 keyboard is quite amazing. Sight-reading probably 
+                  The pain aspect of the 7/8 keyboard is quite amazing. Sight-reading probably
                   has the most dramatic effect.
                 </p>
                 <p>
-                  I have found on a regular size keyboard I can last about an hour and then my 
-                  hands and entire arms start to feel tired. If I persist, within about 20 
+                  I have found on a regular size keyboard I can last about an hour and then my
+                  hands and entire arms start to feel tired. If I persist, within about 20
                   minutes I am in pain and must stop.
                 </p>
                 <p>
-                  Playing similar pieces on the 7/8 keyboard I can sight-read for over two 
-                  hours completely pain free! I can play large chords, octave passages, leaps, 
+                  Playing similar pieces on the 7/8 keyboard I can sight-read for over two
+                  hours completely pain free! I can play large chords, octave passages, leaps,
                   huge dynamic ranges and my brain fatigues long before my fingers or arms.
                 </p>
                 <p className="text-foreground font-semibold">
-                  The 7/8 keyboard has turned an endurance session into pure pleasure. I 
-                  can&apos;t begin to describe how much fun it is to be able to access the 
+                  The 7/8 keyboard has turned an endurance session into pure pleasure. I
+                  can&apos;t begin to describe how much fun it is to be able to access the
                   notes so easily without fatigue.
                 </p>
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={200}>
               <p className="text-foreground font-semibold mt-8">Linda Gould</p>
               <p className="text-muted-foreground">First DS Keyboard Owner</p>
@@ -315,23 +319,26 @@ export default function DonationsPage() {
                 />
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={100}>
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-foreground">
                   Nicole Halton&apos;s Recital Testimony
                 </h3>
                 <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                  &ldquo;The greatest difference that I noticed while performing on the reduced 
-                  size keyboard was the level of comfort I felt at the piano. I felt that for 
-                  the first time I was in command of the instrument instead of feeling limited 
+                  &ldquo;The greatest difference that I noticed while performing on the reduced
+                  size keyboard was the level of comfort I felt at the piano. I felt that for
+                  the first time I was in command of the instrument instead of feeling limited
                   by the physical difficulty of playing the piano.&rdquo;
                 </blockquote>
                 <p className="text-muted-foreground leading-relaxed">
-                  In preparation for her recital, Nicole discovered that she could memorize 
-                  music more quickly on the reduced size keyboard because the patterns were 
+                  In preparation for her recital, Nicole discovered that she could memorize
                   easier to feel and she could create better pathways for her hands and fingers.
                 </p>
+                <div className="mt-4">
+                  <p className="text-foreground font-semibold">Nicole Halton</p>
+                  <p className="text-muted-foreground">Bachelor of Music in Piano Performance, Southern Methodist University</p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -347,9 +354,9 @@ export default function DonationsPage() {
                 Tax Deductible Donations
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                The DS Standard Foundation is a 501(c)(3) non-profit organization. Contributions 
-                made by US citizens are deductible on IRS Form 1040 Schedule A. Depending upon 
-                the tax laws in your country of residence, this may be true for citizens of 
+                The DS Standard Foundation is a 501(c)(3) non-profit organization. Contributions
+                made by US citizens are deductible on IRS Form 1040 Schedule A. Depending upon
+                the tax laws in your country of residence, this may be true for citizens of
                 other countries as well. Please check with your tax advisor.
               </p>
             </div>
@@ -365,19 +372,19 @@ export default function DonationsPage() {
               Make a Difference Today
             </h2>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <p className="text-xl text-muted-foreground mb-12 text-balance">
-              Your generosity helps us provide DS keyboards to educational institutions 
+              Your generosity helps us provide DS keyboards to educational institutions
               and supports pianists in achieving their full potential.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="rounded-full px-8">
                 <a
-                  href="https://www.paypal.com/donate"
+                  href="https://www.paypal.com/donate?token=2qgGOfIl_L5nq4GEiaalo09tstRsyYbVQEQlkPX6K3oEeMFEzKXw_arunl7vd7idzQXKklfEjsGpgJss"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

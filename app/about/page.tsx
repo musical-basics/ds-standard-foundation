@@ -48,6 +48,7 @@ const boardMembers = [
     name: "Alex Steinbuhler",
     role: "Treasurer",
     image: "/the_ds_standard_Alex-at-router-1024x701.jpg",
+    imageClassName: "object-top scale-[1.75] origin-[50%_20%]",
     description: "Grandson of the Foundation's founder, Alex has a strong commitment to carrying on the Foundation's manufacturing operations. Since 2016 Alex has worked building piano actions and acquired high level skills in all aspects of their manufacture.",
   },
   {
@@ -249,7 +250,7 @@ export default function AboutPage() {
                         src={member.image}
                         alt={member.name}
                         fill
-                        className="object-cover"
+                        className={`object-cover ${member.imageClassName || ""}`}
                       />
                     </div>
                   )}

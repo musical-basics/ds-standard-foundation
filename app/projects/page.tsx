@@ -46,24 +46,33 @@ export default function ProjectsPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
-        
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/projects_Students-at-SMU-Institute-for-Young-Pianists-bb.jpg"
+            alt="Students at SMU Institute for Young Pianists"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-background/50 backdrop-blur-[2px]" />
+        </div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
             <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
               Our Impact
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8">
               Our Projects
             </h1>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
-              From university partnerships to international competitions, discover how 
+              From university partnerships to international competitions, discover how
               the DS Standard Foundation is changing the landscape of piano education.
             </p>
           </AnimatedSection>
@@ -92,28 +101,28 @@ export default function ProjectsPage() {
                 A Short History
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={100}>
               <h2 className="text-4xl font-bold tracking-tight text-foreground mb-6">
                 Pioneering Change
               </h2>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={200}>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  In 1996 Linda Gould was the first to purchase a DS Keyboard. Her video 
-                  &ldquo;My Piano Has a Secret&rdquo; powerfully describes the crying need 
+                  In 1996 Linda Gould was the first to purchase a DS Keyboard. Her video
+                  &ldquo;My Piano Has a Secret&rdquo; powerfully describes the crying need
                   for alternative keyboards to be adopted in the world of the piano.
                 </p>
                 <p>
-                  In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas was 
-                  the first to study the practicality of using alternative size keyboards 
+                  In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas was
+                  the first to study the practicality of using alternative size keyboards
                   in a university setting.
                 </p>
                 <p>
-                  Universities such as Texas Tech University and the University of 
-                  Nebraska-Lincoln have collectively purchased many DS Keyboards, and today 
+                  Universities such as Texas Tech University and the University of
+                  Nebraska-Lincoln have collectively purchased many DS Keyboards, and today
                   the movement continues to grow globally.
                 </p>
               </div>
@@ -134,8 +143,8 @@ export default function ProjectsPage() {
                 Loans of DS Keyboards
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
-                Universities and music schools are invited to apply to the DS Standard Foundation 
-                to borrow a DS Keyboard for up to 12 months and have the option to purchase 
+                Universities and music schools are invited to apply to the DS Standard Foundation
+                to borrow a DS Keyboard for up to 12 months and have the option to purchase
                 the DS Keyboard at any time.
               </p>
             </div>
@@ -262,14 +271,14 @@ export default function ProjectsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 text-center text-balance">
-              &ldquo;Since the life-changing moment I started practicing and performing on 
-              an alternatively-sized piano keyboard, I experienced a whole new level of 
-              artistic and technical freedom. The DS Standard keyboards offer all musicians, 
-              regardless of hand-span, the opportunity to focus on what matters most: 
+              &ldquo;Since the life-changing moment I started practicing and performing on
+              an alternatively-sized piano keyboard, I experienced a whole new level of
+              artistic and technical freedom. The DS Standard keyboards offer all musicians,
+              regardless of hand-span, the opportunity to focus on what matters most:
               making music with ease, imagination and joy.&rdquo;
             </blockquote>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <div className="text-center">
               <p className="text-foreground font-semibold">Dr. Jessica Johnson</p>
@@ -307,31 +316,31 @@ export default function ProjectsPage() {
                 Supporting Competitions
               </h2>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={100}>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                The DS Standard Foundation will consider supporting any competition that 
+                The DS Standard Foundation will consider supporting any competition that
                 allows contestants to compete on DS Standard sized keyboards.
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={200}>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                From 2014 to 2016 the Foundation supported the Dallas International Piano 
-                Competition by contributing to keyboard preparation. This competition was 
+                From 2014 to 2016 the Foundation supported the Dallas International Piano
+                Competition by contributing to keyboard preparation. This competition was
                 the first in the world to provide DS5.0 and DS6.0 keyboards for contestants.
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={300}>
               <div className="p-6 bg-background rounded-2xl border border-border">
                 <h3 className="font-semibold text-foreground mb-3">
                   Anna R. Arazi&apos;s Story
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  In March 2015, Anna arrived at the Dallas International Piano Competition 
-                  and had never played on a smaller keyboard before. She immediately took to 
-                  the DS6.0 size. By the end of the competition, she won 3rd place prize 
+                  In March 2015, Anna arrived at the Dallas International Piano Competition
+                  and had never played on a smaller keyboard before. She immediately took to
+                  the DS6.0 size. By the end of the competition, she won 3rd place prize
                   and the pain in her arms had completely disappeared!
                 </p>
               </div>
@@ -354,26 +363,26 @@ export default function ProjectsPage() {
                 />
               </div>
             </AnimatedSection>
-            
+
             <div className="space-y-6">
               <AnimatedSection>
                 <h2 className="text-4xl font-bold tracking-tight text-foreground">
                   Showcasing DS Keyboards
                 </h2>
               </AnimatedSection>
-              
+
               <AnimatedSection delay={100}>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The Foundation has supported the promotion of Dr Carol Leone&apos;s CD: 
-                  <em>Change of Keys: One piano, three keyboards</em> through MSR Classics. 
+                  The Foundation has supported the promotion of Dr Carol Leone&apos;s CD:
+                  <em>Change of Keys: One piano, three keyboards</em> through MSR Classics.
                   As a result the CD received much media exposure and airplay.
                 </p>
               </AnimatedSection>
-              
+
               <AnimatedSection delay={200}>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Pianodrome is a Scottish company that builds amphitheaters as small 
-                  entertainment venues. Their &ldquo;Royal Pianodrome&rdquo; provides the 
+                  Pianodrome is a Scottish company that builds amphitheaters as small
+                  entertainment venues. Their &ldquo;Royal Pianodrome&rdquo; provides the
                   opportunity for pianists to experience DS Keyboards.
                 </p>
               </AnimatedSection>
@@ -390,14 +399,14 @@ export default function ProjectsPage() {
               Want to Partner With Us?
             </h2>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={100}>
             <p className="text-xl text-muted-foreground mb-12 text-balance">
-              Whether you&apos;re an educational institution, competition organizer, or researcher, 
+              Whether you&apos;re an educational institution, competition organizer, or researcher,
               we&apos;d love to hear from you.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="rounded-full px-8">

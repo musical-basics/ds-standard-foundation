@@ -76,7 +76,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
+      <section className="relative min-h-[50vh] mt-28 flex items-center justify-center overflow-hidden pb-16">
         <div className="absolute inset-0 z-0">
           <Image
             src="/about_DS-Standard-Keyboards-X.jpg"
@@ -85,22 +85,15 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-background/10" />
         </div>
+      </section>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      {/* Intro Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <div className="relative w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden bg-background">
-              <Image
-                src="/about_DS-SF-Logo-1.png"
-                alt="DS Standard Foundation Logo"
-                fill
-                className="object-contain p-2"
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">
               Our Foundation
             </p>
           </AnimatedSection>

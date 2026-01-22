@@ -57,7 +57,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                  "px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 whitespace-nowrap",
                   "text-foreground/80 hover:text-foreground hover:bg-secondary"
                 )}
               >

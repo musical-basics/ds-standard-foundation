@@ -59,13 +59,13 @@ const boardMembers = [
   {
     name: "Rhonda Boyle",
     role: "Board Member",
-    image: "/about_Original-Action-Rhonda.jpg",
+    image: "/about_rhonda-boyle.jpg",
     description: "An eager student of the piano since her childhood in Melbourne, Australia, and an environmental scientist with expertise in urban planning. In 2009 Rhonda was the first pianist in Australia to own and play a DS5.5® Keyboard.",
   },
   {
     name: "Chase & Peter Steinbuhler",
     role: "Board Members",
-    image: null,
+    image: "/about_chasepeter.jpg",
     description: "Added in February 2025 to ensure the future of manufacturing operations. They manage a family-owned textile business that has been thriving in Titusville since 1897.",
   },
 ]
@@ -85,7 +85,7 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">

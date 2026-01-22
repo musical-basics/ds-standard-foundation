@@ -77,7 +77,16 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/about_DS-Standard-Keyboards-X.jpg"
+            alt="DS Standard Keyboards"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>

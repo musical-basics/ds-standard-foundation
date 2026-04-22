@@ -19,7 +19,7 @@ const directors = [
   {
     name: "Barry Cressman",
     role: "Secretary",
-    image: null,
+    image: "/about_Barry_Cressman.jpg",
     email: "bcressman@zoominternet.net",
     description: "For general inquiries about the Foundation and donations to the Foundation.",
   },

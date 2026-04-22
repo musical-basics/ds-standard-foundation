@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/animated-section"
-import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 const adultSizes = [
@@ -43,27 +42,27 @@ export default function Home2Page() {
     <div className="min-h-screen bg-background text-foreground font-[family-name:var(--font-body)]">
       <Navbar />
 
-      {/* Top hero (from previous homepage) */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 font-[family-name:var(--font-sans)]">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
+      {/* Top hero */}
+      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/40 to-background" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
+            <p className="text-[0.65rem] uppercase tracking-[0.3em] font-medium text-primary mb-8 font-[family-name:var(--font-inter)]">
               DS Standard Foundation
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 text-balance">
+            <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-foreground mb-8 text-balance">
               Alternative Keyboards
               <br />
-              <span className="text-primary">That Fit Every Hand</span>
+              <span className="italic font-light text-primary">That Fit Every Hand</span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed text-balance">
+            <p className="text-xl md:text-2xl text-foreground/75 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
               Enabling pianists to achieve their full musical potential while avoiding injury,
               with keyboards engineered to match every hand size.
             </p>
@@ -71,33 +70,44 @@ export default function Home2Page() {
 
           <AnimatedSection delay={300}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="rounded-full px-8">
-                <Link href="/the_ds_standard">
-                  Discover the Standard
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-transparent">
-                <Link href="/products">View Products</Link>
-              </Button>
+              <Link
+                href="/the_ds_standard"
+                className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-background border border-foreground bg-foreground hover:bg-primary hover:border-primary transition-colors font-[family-name:var(--font-inter)]"
+              >
+                Discover the Standard
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
+              >
+                View Products
+              </Link>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Top hero image */}
-      <section className="relative -mt-20 pb-24 font-[family-name:var(--font-sans)]">
+      {/* Top hero image — museum plate */}
+      <section className="pb-20">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <div className="relative aspect-[3/1] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/home_Poster-3-Keyboards-Wide4-1024x307.jpg"
-                alt="Three DS Standard keyboard sizes"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+              <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+              <div className="relative aspect-[3/1] overflow-hidden">
+                <Image
+                  src="/home_Poster-3-Keyboards-Wide4-1024x307.jpg"
+                  alt="The three DS Standard keyboard specifications for adult hands"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </figure>
+            <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+              <span>Pl. I — DS6.5, DS6.0, DS5.5 at scale</span>
+              <span className="text-right">The Certified Adult Ledger</span>
+            </figcaption>
           </AnimatedSection>
         </div>
       </section>

@@ -104,9 +104,8 @@ export default function Home2Page() {
                 />
               </div>
             </figure>
-            <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-              <span>Pl. I — DS6.5, DS6.0, DS5.5 at scale</span>
-              <span className="text-right">The Certified Adult Ledger</span>
+            <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+              Pl. I — DS6.5, DS6.0, DS5.5 at scale
             </figcaption>
           </AnimatedSection>
         </div>
@@ -114,11 +113,7 @@ export default function Home2Page() {
 
       <div className="pt-28 px-4 md:px-12 lg:px-24">
         {/* Masthead / dateline */}
-        <header className="w-full max-w-[1400px] mx-auto flex justify-between items-end pb-4 border-b border-border">
-          <div className="flex gap-8 text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)]">
-            <span>Vol. XXXII</span>
-            <span className="hidden sm:inline">Annual Review &amp; Certification Ledger</span>
-          </div>
+        <header className="w-full max-w-[1400px] mx-auto flex justify-end items-end pb-4 border-b border-border">
           <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right">
             <span>Est. 1993</span>
             <span className="hidden sm:inline mx-3 text-border">|</span>

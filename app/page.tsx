@@ -40,16 +40,14 @@ const adultSizes = [
 export default function Home2Page() {
   return (
     <div className="min-h-screen bg-background text-foreground font-[family-name:var(--font-body)]">
-      {/* Masthead / dateline: fixed strip that shares the top band with the navbar pill */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-xl border-b border-border/50">
-        <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex justify-end items-center">
-          <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right">
-            <span>Est. 1993</span>
-            <span className="hidden sm:inline mx-3 text-border">|</span>
-            <span className="hidden sm:inline">501(c)(3)</span>
-          </div>
+      {/* Masthead / dateline: floats in the same top band as the navbar pill, no background so nothing intersects the pill */}
+      <div className="fixed top-0 right-0 z-40 px-6 md:px-10 lg:px-16 py-7 pointer-events-none">
+        <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right pointer-events-auto">
+          <span>Est. 1993</span>
+          <span className="hidden sm:inline mx-3 text-border">|</span>
+          <span className="hidden sm:inline">501(c)(3)</span>
         </div>
-      </header>
+      </div>
 
       <Navbar />
 
@@ -122,11 +120,9 @@ export default function Home2Page() {
         </div>
       </section>
 
-      {/* Section divider between top hero and institutional body */}
-      <div className="py-12 md:py-16 flex items-center justify-center">
-        <div className="w-20 md:w-28 h-px bg-border" />
-        <span className="mx-6 text-lg text-accent leading-none select-none">❦</span>
-        <div className="w-20 md:w-28 h-px bg-border" />
+      {/* Section divider: reuses the centered vertical hairline used elsewhere on the page */}
+      <div className="w-full h-24 flex justify-center items-center">
+        <div className="w-px h-full bg-border" />
       </div>
 
       <div className="px-4 md:px-12 lg:px-24">

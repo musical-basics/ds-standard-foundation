@@ -42,6 +42,7 @@ const boardMembers = [
     name: "Dr. Barry Cressman",
     role: "Secretary",
     image: "/about_Barry_Cressman.jpg",
+    imageClassName: "scale-[1.6] origin-[50%_35%]",
     description: "A native of New York and an alumnus of William and Mary, the University of St. Andrews, and Princeton, Barry has devoted his entire career to building non-profit corporations and philanthropy.",
   },
   {

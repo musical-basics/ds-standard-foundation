@@ -40,6 +40,17 @@ const adultSizes = [
 export default function Home2Page() {
   return (
     <div className="min-h-screen bg-background text-foreground font-[family-name:var(--font-body)]">
+      {/* Masthead / dateline (above navbar) */}
+      <div className="px-4 md:px-12 lg:px-24 pt-3">
+        <header className="w-full max-w-[1400px] mx-auto flex justify-end items-end pb-3 border-b border-border">
+          <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right">
+            <span>Est. 1993</span>
+            <span className="hidden sm:inline mx-3 text-border">|</span>
+            <span className="hidden sm:inline">501(c)(3)</span>
+          </div>
+        </header>
+      </div>
+
       <Navbar />
 
       {/* Top hero */}
@@ -111,16 +122,7 @@ export default function Home2Page() {
         </div>
       </section>
 
-      <div className="pt-28 px-4 md:px-12 lg:px-24">
-        {/* Masthead / dateline */}
-        <header className="w-full max-w-[1400px] mx-auto flex justify-end items-end pb-4 border-b border-border">
-          <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right">
-            <span>Est. 1993</span>
-            <span className="hidden sm:inline mx-3 text-border">|</span>
-            <span className="hidden sm:inline">501(c)(3)</span>
-          </div>
-        </header>
-
+      <div className="px-4 md:px-12 lg:px-24">
         <main className="w-full max-w-[1400px] mx-auto">
           {/* 1. Hero: institutional cover */}
           <section className="min-h-[85vh] py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">

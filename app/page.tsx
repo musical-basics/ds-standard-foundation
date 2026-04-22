@@ -88,7 +88,7 @@ export default function Home2Page() {
         </div>
       </section>
 
-      {/* Top hero image — museum plate */}
+      {/* Top hero image: museum plate */}
       <section className="pb-20">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
@@ -105,7 +105,7 @@ export default function Home2Page() {
               </div>
             </figure>
             <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-              Pl. I — DS6.5, DS6.0, DS5.5 at scale
+              Pl. I. DS6.5, DS6.0, DS5.5 at scale
             </figcaption>
           </AnimatedSection>
         </div>
@@ -122,7 +122,7 @@ export default function Home2Page() {
         </header>
 
         <main className="w-full max-w-[1400px] mx-auto">
-          {/* 1. Hero — institutional cover */}
+          {/* 1. Hero: institutional cover */}
           <section className="min-h-[85vh] py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <AnimatedSection className="lg:col-span-7 flex flex-col justify-center pr-0 lg:pr-12">
               <span className="mb-8 block text-[0.65rem] uppercase tracking-[0.25em] font-medium text-accent font-[family-name:var(--font-inter)]">
@@ -169,7 +169,7 @@ export default function Home2Page() {
                 </div>
               </figure>
               <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                <span>Fig. 1 — DS6.0 Universal Specification</span>
+                <span>Fig. 1. DS6.0 Universal Specification</span>
                 <span className="text-right">Pl. 042</span>
               </figcaption>
             </AnimatedSection>
@@ -190,7 +190,7 @@ export default function Home2Page() {
             <AnimatedSection className="md:col-span-8 lg:col-span-8">
               <p className="text-2xl lg:text-[1.75rem] leading-[1.55] text-foreground [&::first-letter]:float-left [&::first-letter]:font-[family-name:var(--font-display)] [&::first-letter]:text-[5.5rem] [&::first-letter]:leading-[0.8] [&::first-letter]:pr-3 [&::first-letter]:pt-1 [&::first-letter]:text-primary">
                 For more than three centuries the piano keyboard has remained largely
-                immutable. A single span — codified in the late nineteenth century — has
+                immutable. A single span, codified in the late nineteenth century, has
                 demanded uniform physical adaptation from the irreducibly heterogeneous
                 human hand. The DS Standard Foundation exists to rectify this anatomical
                 incongruity through biomechanical research and the credentialing of
@@ -198,7 +198,7 @@ export default function Home2Page() {
               </p>
               <p className="text-xl lg:text-2xl leading-[1.6] text-foreground/75 mt-8 indent-10">
                 Our mandate is simple yet considered: to remove pain from pedagogy, and
-                to make the entire repertoire accessible — so that musical expression
+                to make the entire repertoire accessible, so that musical expression
                 is governed by imagination, not by the span of a metacarpal.
               </p>
             </AnimatedSection>
@@ -206,7 +206,7 @@ export default function Home2Page() {
 
           <hr className="border-t border-border" />
 
-          {/* 3. Certified sizes — specimen cards */}
+          {/* 3. Certified sizes: specimen cards */}
           <section className="py-32">
             <div className="mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
               <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl italic text-primary">
@@ -346,7 +346,7 @@ export default function Home2Page() {
                   Christopher Donison
                 </cite>
                 <span className="text-sm italic text-foreground/60 mt-1">
-                  Music Director, Shaw Festival — inventor of the 7/8 keyboard
+                  Music Director of the Shaw Festival; inventor of the 7/8 keyboard
                 </span>
               </div>
             </AnimatedSection>
@@ -369,7 +369,7 @@ export default function Home2Page() {
               <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-primary/40" />
               <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-primary/40" />
               <figcaption className="mt-4 text-[0.65rem] uppercase tracking-[0.2em] text-foreground/60 font-[family-name:var(--font-inter)] pl-2">
-                David &amp; Linda Steinbuhler — founders
+                David &amp; Linda Steinbuhler, founders
               </figcaption>
             </AnimatedSection>
 
@@ -392,7 +392,7 @@ export default function Home2Page() {
                 </p>
                 <p className="text-xl text-foreground/80 leading-relaxed">
                   We credential manufacturers, support institutional acquisition, and
-                  maintain the biomechanical archive — so that the keyboard a pianist
+                  maintain the biomechanical archive, so that the keyboard a pianist
                   encounters tomorrow will be the one most fit for their hand.
                 </p>
               </div>

@@ -122,7 +122,8 @@ export default function PianoKeyboardsOfTheFuturePage() {
               <AnimatedSection key={slide.src} delay={index * 60}>
                 <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
                   <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                  <div className="relative aspect-[4/3] overflow-hidden [filter:grayscale(85%)_sepia(18%)_contrast(1.05)]">
+                  {/* Slides are 1920x1080; keep the container 16:9 so edge captions aren't cropped. */}
+                  <div className="relative aspect-[16/9] overflow-hidden [filter:grayscale(85%)_sepia(18%)_contrast(1.05)]">
                     <Image
                       src={slide.src}
                       alt={slide.alt}

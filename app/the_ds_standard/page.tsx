@@ -101,8 +101,8 @@ export default function DSStandard2Page() {
 
           <AnimatedSection delay={200}>
             <p className="text-xl md:text-2xl text-foreground/75 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
-              A registry of certified keyboard sizes, held where they belong: under the
-              control of pianists, not locked inside private businesses.
+              Certified keyboard sizes that belong to pianists, not to the companies
+              that build the instruments.
             </p>
           </AnimatedSection>
 

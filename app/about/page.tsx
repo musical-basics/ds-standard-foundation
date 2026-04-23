@@ -179,7 +179,7 @@ export default function About2Page() {
                 <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-2xl">
                   The DS Standard Foundation is a 501(c)(3) non-profit headquartered
                   in Pennsylvania. We exist so that pianists whose hands cannot
-                  easily reach notes on the traditional 6.5 inch span can play the
+                  easily reach notes on the traditional 6.5 inch span keyboard can play the
                   full repertoire without paying for it with injuries and strain.
                 </p>
               </AnimatedSection>

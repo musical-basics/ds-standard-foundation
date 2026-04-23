@@ -178,9 +178,9 @@ export default function About2Page() {
               <AnimatedSection delay={200} className="lg:col-span-7">
                 <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-2xl">
                   The DS Standard Foundation is a 501(c)(3) non-profit headquartered
-                  in Pennsylvania. We exist so that pianists whose hands are not a
-                  traditional 6.5 inch span can play the full repertoire without
-                  paying for it in tendons, technique, or ambition.
+                  in Pennsylvania. We exist so that pianists whose hands cannot
+                  easily reach notes on the traditional 6.5 inch span can play the
+                  full repertoire without paying for it with injuries and strain.
                 </p>
               </AnimatedSection>
 

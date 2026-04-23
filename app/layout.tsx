@@ -32,21 +32,8 @@ export const metadata: Metadata = {
   description: 'Setting a standard for alternatively sized keyboards recognized globally, so pianists may achieve their full musical potential while avoiding injury.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon-gold-32x32.png',
+    apple: '/apple-icon-gold.png',
   },
 }
 

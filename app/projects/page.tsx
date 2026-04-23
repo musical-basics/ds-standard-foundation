@@ -24,6 +24,7 @@ const activeUniversities: Institution[] = [
   { name: "Appalachian State University", location: "Boone", contact: "Catherine Garner, Keyboard Area Coordinator" },
   { name: "University of Memphis", location: "Memphis", contact: "Artina McCain, Associate Professor of Piano" },
   { name: "Johns Hopkins Peabody Institute", location: "Baltimore", contact: "Kris Chesky, Chair of Performing Arts and Health" },
+  { name: "Musical Arts Center of San Antonio", location: "San Antonio", contact: "Ken Thompson, Advanced Piano Coach" },
   { name: "University of Colorado Boulder", location: "Boulder", contact: "Jennifer Hayghe, Chair and Associate Professor" },
 ]
 
@@ -33,6 +34,7 @@ const loanUniversities: Institution[] = [
   { name: "Stanford University", contact: "Elizabeth Schumann, Assistant Professor of Piano" },
   { name: "Colorado Mesa University", location: "Grand Junction", contact: "Kathryn Mientka, guest Professor of Piano" },
   { name: "Institute of Music Physiology and Musicians Medicine", location: "Hannover, Germany", contact: "Florian Worschech, Postdoctoral Researcher" },
+  { name: "Rutgers University", contact: "Min Kwon, Head of Piano" },
 ]
 
 type Researcher = {
@@ -138,6 +140,63 @@ export default function Projects2Page() {
 
       <div className="px-4 md:px-12 lg:px-24">
         <main className="w-full max-w-[1400px] mx-auto">
+          {/* 1b. A Short History */}
+          <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+            <div className="md:col-span-4 lg:col-span-3">
+              <AnimatedSection>
+                <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)] block">
+                  Archival Note
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight mt-4 sticky top-28">
+                  A Short <span className="italic text-primary">History</span>.
+                </h2>
+              </AnimatedSection>
+            </div>
+            <AnimatedSection className="md:col-span-8 lg:col-span-8 space-y-6">
+              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                In 1996 Linda Gould was the first to purchase a DS Keyboard. Her
+                video &ldquo;My Piano Has a Secret&rdquo; powerfully describes the
+                crying need for alternative keyboards to be adopted in the world of
+                the piano.
+              </p>
+              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas
+                was the first to study the practicality of using alternative size
+                keyboards in a university setting.
+              </p>
+              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                Universities such as Texas Tech University and the University of
+                Nebraska-Lincoln have collectively purchased many DS Keyboards, but
+                today there no longer is a piano faculty member, the
+                university&rsquo;s &ldquo;champion,&rdquo; to study them. Lionel
+                Yu&rsquo;s video &ldquo;Piano&rsquo;s Darkest Secret&rdquo;
+                describes some of the problems confronting adoption.
+              </p>
+              <div className="pt-6 flex flex-wrap gap-x-8 gap-y-3 border-t border-border">
+                <a
+                  href="https://www.paskpiano.org/performances-and-conferences/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
+                >
+                  <span className="inline-block w-6 h-px bg-primary" />
+                  PASK performances and conferences
+                </a>
+                <a
+                  href="https://www.paskpiano.org/universities-schools/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
+                >
+                  <span className="inline-block w-6 h-px bg-primary" />
+                  PASK universities and schools
+                </a>
+              </div>
+            </AnimatedSection>
+          </section>
+
+          <hr className="border-t border-border" />
+
           {/* 2. Prospectus */}
           <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
             <div className="md:col-span-4 lg:col-span-3">
@@ -228,10 +287,23 @@ export default function Projects2Page() {
                       Anna R. Arazi, Dallas 2015
                     </h3>
                     <p className="text-base text-foreground/75 leading-relaxed">
-                      Anna arrived at the Dallas International Piano Competition having
-                      never played a narrower action. She took to the DS6.0 at first
-                      sitting, finished with a third-place prize, and (notably) left
-                      without the arm pain she walked in with.
+                      In March of 2015 Anna R. Arazi arrived at the Dallas
+                      International Piano Competition on a Wednesday. Anna&rsquo;s
+                      hands are small and she suffers from pain in her forearms when
+                      playing conventional keyboards. She was eager to participate
+                      in this particular competition because it offered pianists the
+                      opportunity to compete using the smaller DS Standard
+                      keyboards. She had never played on a smaller keyboard before,
+                      but immediately took to the DS6.0 size. On Thursday she
+                      advanced to the semifinals, on Friday she advanced to the
+                      finals, and on Saturday she gave the performance where she
+                      won the third place prize. The amazing fact is that by the
+                      end of the competition the pain in Anna&rsquo;s arms had
+                      completely disappeared.
+                    </p>
+                    <p className="mt-4 text-[0.7rem] uppercase tracking-[0.2em] text-foreground/55 font-[family-name:var(--font-inter)] leading-relaxed">
+                      Finals repertoire: Prokofiev Piano Concerto No. 1, 2015 Dallas
+                      International Piano Competition.
                     </p>
                   </div>
                 </article>
@@ -264,6 +336,15 @@ export default function Projects2Page() {
                       Pianodrome; a public venue in which any visiting pianist can sit
                       down and try the geometry for themselves.
                     </p>
+                    <a
+                      href="https://www.pianodrome.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)]"
+                    >
+                      <span className="inline-block w-6 h-px bg-primary" />
+                      Read the Pianodrome blog post
+                    </a>
                   </div>
                 </article>
               </AnimatedSection>
@@ -464,13 +545,24 @@ export default function Projects2Page() {
               >
                 &ldquo;
               </span>
-              <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground mb-12 relative z-10">
-                Since the life-changing moment I started practicing and performing on
-                an alternatively sized piano keyboard, I experienced a whole new level
-                of artistic and technical freedom. The DS Standard keyboards offer all
-                musicians, regardless of hand span, the opportunity to focus on what
-                matters most: making music with ease, imagination and joy.
-              </p>
+              <div className="space-y-8 mb-12 relative z-10">
+                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground">
+                  Since the life-changing moment I started practicing and performing
+                  on an alternatively-sized piano keyboard, I experienced a whole new
+                  level of artistic and technical freedom.
+                </p>
+                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground">
+                  The use of DS Standard keyboards has opened up new artistic realms
+                  for my students with smaller hand-spans, including expanded
+                  repertoire, enhanced musical possibilities, greater physical ease,
+                  and even recovery from pain and injury.
+                </p>
+                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground">
+                  The DS Standard keyboards offer all musicians, regardless of
+                  hand-span, the opportunity to focus on what matters most: making
+                  music with ease, imagination, and joy.
+                </p>
+              </div>
               <div className="flex flex-col items-center">
                 <div className="w-12 h-px bg-primary mb-4" />
                 <cite className="text-[0.7rem] uppercase tracking-[0.25em] font-semibold text-foreground not-italic block font-[family-name:var(--font-inter)]">
@@ -506,9 +598,10 @@ export default function Projects2Page() {
                   <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
                     From 2014 through 2016 the Foundation supported the Dallas
                     International Piano Competition by contributing to keyboard
-                    preparation. It was the first competition in the world to offer
-                    DS5.0 and DS6.0 keyboards to contestants; a small logistical act
-                    with an outsized effect on what the entrants could attempt.
+                    preparation. This competition was the first in the world to
+                    provide DS5.0 and DS6.0 keyboards for the contestants; a small
+                    logistical act with an outsized effect on what the entrants
+                    could attempt.
                   </p>
                   <p className="text-base text-foreground/70 leading-relaxed max-w-2xl mt-4">
                     The Foundation will consider supporting any competition that allows
@@ -524,11 +617,12 @@ export default function Projects2Page() {
                     Change of Keys: One Piano, Three Keyboards
                   </h3>
                   <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl">
-                    The Foundation supported the release of Dr. Carol Leone&rsquo;s
-                    recording through MSR Classics. The disc circulated widely, earned
-                    substantial airplay, and remains a useful artifact when a
-                    conversation with a new institution needs audible evidence rather
-                    than argument.
+                    The Foundation has supported the promotion of Dr. Carol
+                    Leone&rsquo;s CD, Change of Keys: One piano, three keyboards,
+                    through MSR Classics. As a result the CD received much media
+                    exposure and airplay, and the disc remains a useful artifact
+                    when a conversation with a new institution needs audible
+                    evidence rather than argument.
                   </p>
                 </article>
               </div>

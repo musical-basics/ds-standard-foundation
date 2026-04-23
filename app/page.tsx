@@ -639,8 +639,44 @@ export default function Home2Page() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Sarah Michelini */}
+              {/* Nicole Halton */}
               <AnimatedSection>
+                <article className="bg-card p-8 lg:p-10 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)] relative h-full">
+                  <div className="absolute inset-3 border border-border/40 pointer-events-none" />
+                  <div className="relative">
+                    <figure className="mb-6 max-w-[240px] mx-auto">
+                      <div className="relative bg-background p-2 border border-border">
+                        <div className="absolute inset-1 border border-border/40 pointer-events-none z-10" />
+                        <div className="relative overflow-hidden aspect-[252/300] [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+                          <Image
+                            src="/about_Nicoles-Recital-252x300.jpg"
+                            alt="Nicole Halton at her recital"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                      <figcaption className="mt-3 text-[0.6rem] uppercase tracking-[0.2em] text-foreground/60 text-center font-[family-name:var(--font-inter)]">
+                        Pl. Nicole Halton, recital
+                      </figcaption>
+                    </figure>
+                    <h3 className="font-[family-name:var(--font-display)] text-2xl text-foreground mb-2 text-center">
+                      Nicole Halton
+                    </h3>
+                    <p className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 mb-6 pb-4 border-b border-border text-center font-[family-name:var(--font-inter)]">
+                      Recital Testimony
+                    </p>
+                    <div className="space-y-4 pl-4 border-l border-border italic font-[family-name:var(--font-display)] text-lg leading-relaxed text-foreground/80">
+                      <p>&ldquo;The greatest difference that I noticed while performing on the reduced size keyboard was the level of comfort I felt at the piano. On the regular piano, I sometimes feel uncomfortable and consequently not in control of the performance. On the reduced size keyboard I was able to carefully place each chord and note so that I was more easily able to shape my performance. I felt that for the first time I was in command of the instrument instead of feeling limited by the physical difficulty of playing the piano.&rdquo;</p>
+                      <p>&ldquo;In preparation for my recital, I discovered that I could memorize music more quickly on the reduced size keyboard because the patterns were easier to feel and I could create better pathways for my hands and fingers.&rdquo;</p>
+                      <p>&ldquo;Also, my practice time was not limited by physical issues. On the regular piano there are some passages and some pieces that I could not practice as much as I would have liked because of the amount of physical discomfort they caused. This virtually disappeared on the reduced size keyboard.&rdquo;</p>
+                    </div>
+                  </div>
+                </article>
+              </AnimatedSection>
+
+              {/* Sarah Michelini */}
+              <AnimatedSection delay={75}>
                 <article className="bg-card p-8 lg:p-10 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)] relative h-full">
                   <div className="absolute inset-3 border border-border/40 pointer-events-none" />
                   <div className="relative">
@@ -750,42 +786,6 @@ export default function Home2Page() {
                       <p>&ldquo;I could do many repetitions w/o tiring.&rdquo;</p>
                       <p>&ldquo;I could feel closer and more connected to the keys.&rdquo;</p>
                       <p>&ldquo;Eliminated excess movement.&rdquo;</p>
-                    </div>
-                  </div>
-                </article>
-              </AnimatedSection>
-
-              {/* Nicole Halton */}
-              <AnimatedSection>
-                <article className="bg-card p-8 lg:p-10 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)] relative h-full">
-                  <div className="absolute inset-3 border border-border/40 pointer-events-none" />
-                  <div className="relative">
-                    <figure className="mb-6 max-w-[240px] mx-auto">
-                      <div className="relative bg-background p-2 border border-border">
-                        <div className="absolute inset-1 border border-border/40 pointer-events-none z-10" />
-                        <div className="relative overflow-hidden aspect-[252/300] [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                          <Image
-                            src="/about_Nicoles-Recital-252x300.jpg"
-                            alt="Nicole Halton at her recital"
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                      <figcaption className="mt-3 text-[0.6rem] uppercase tracking-[0.2em] text-foreground/60 text-center font-[family-name:var(--font-inter)]">
-                        Pl. Nicole Halton, recital
-                      </figcaption>
-                    </figure>
-                    <h3 className="font-[family-name:var(--font-display)] text-2xl text-foreground mb-2 text-center">
-                      Nicole Halton
-                    </h3>
-                    <p className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 mb-6 pb-4 border-b border-border text-center font-[family-name:var(--font-inter)]">
-                      Recital Testimony
-                    </p>
-                    <div className="space-y-4 pl-4 border-l border-border italic font-[family-name:var(--font-display)] text-lg leading-relaxed text-foreground/80">
-                      <p>&ldquo;The greatest difference that I noticed while performing on the reduced size keyboard was the level of comfort I felt at the piano. On the regular piano, I sometimes feel uncomfortable and consequently not in control of the performance. On the reduced size keyboard I was able to carefully place each chord and note so that I was more easily able to shape my performance. I felt that for the first time I was in command of the instrument instead of feeling limited by the physical difficulty of playing the piano.&rdquo;</p>
-                      <p>&ldquo;In preparation for my recital, I discovered that I could memorize music more quickly on the reduced size keyboard because the patterns were easier to feel and I could create better pathways for my hands and fingers.&rdquo;</p>
-                      <p>&ldquo;Also, my practice time was not limited by physical issues. On the regular piano there are some passages and some pieces that I could not practice as much as I would have liked because of the amount of physical discomfort they caused. This virtually disappeared on the reduced size keyboard.&rdquo;</p>
                     </div>
                   </div>
                 </article>

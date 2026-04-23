@@ -15,7 +15,7 @@ const adultSizes = [
     octave: '6.500" (165.1 mm)',
     width: '48.25"',
     profile: "Historical default",
-    note: "The standard codified in the late 19th century. Research demonstrates it strains the majority of adult female pianists and a substantial cohort of male practitioners.",
+    note: "The width inherited from the late nineteenth century. It rewards a long reach and quietly disadvantages the majority of adult female pianists along with a sizeable cohort of male hands.",
   },
   {
     name: "DS6.0",
@@ -24,7 +24,7 @@ const adultSizes = [
     octave: '6.000" (152.4 mm)',
     width: '44.53"',
     profile: "Universal alternative",
-    note: "The primary DS Standard specification. Restores natural relaxation for the broadest distribution of adult hand spans while permitting rapid adaptation.",
+    note: "The middle specification of the registry, and the one most often chosen by institutions. Nearly every adult hand finds relaxation here without losing the feel of the traditional keyboard.",
   },
   {
     name: "DS5.5",
@@ -33,7 +33,7 @@ const adultSizes = [
     octave: '5.538" (140.7 mm)',
     width: '41.10"',
     profile: "Small-span relief",
-    note: "Engineered for smaller adult hands. Delivers to a pianist of average span the geometry historically enjoyed only by large-handed virtuosi.",
+    note: "The seven-eighths keyboard, built for smaller adult hands. It offers the pianist of average span the ease historically enjoyed only by very large hands.",
   },
 ]
 
@@ -141,8 +141,9 @@ export default function Home2Page() {
                 &amp; Instrument.
               </h1>
               <p className="text-xl md:text-2xl text-foreground/80 max-w-xl leading-relaxed">
-                Researching, validating, and certifying alternatively sized piano keyboards
-                so that virtuosic intent is never limited by physiological span.
+                We research, certify, and help build alternatively sized piano
+                keyboards, so that a pianist&rsquo;s reach is never the reason
+                a piece stays out of reach.
               </p>
               <div className="mt-12 flex flex-wrap gap-4 items-center">
                 <Link
@@ -194,17 +195,17 @@ export default function Home2Page() {
             </div>
             <AnimatedSection className="md:col-span-8 lg:col-span-8">
               <p className="text-2xl lg:text-[1.75rem] leading-[1.55] text-foreground [&::first-letter]:float-left [&::first-letter]:font-[family-name:var(--font-display)] [&::first-letter]:text-[5.5rem] [&::first-letter]:leading-[0.8] [&::first-letter]:pr-3 [&::first-letter]:pt-1 [&::first-letter]:text-primary">
-                For more than three centuries the piano keyboard has remained largely
-                immutable. A single span, codified in the late nineteenth century, has
-                demanded uniform physical adaptation from the irreducibly heterogeneous
-                human hand. The DS Standard Foundation exists to rectify this anatomical
-                incongruity through biomechanical research and the credentialing of
-                distinct alternative specifications.
+                For more than three centuries the piano keyboard has been built in
+                essentially one size. A single width, settled on in the late
+                nineteenth century, has asked every kind of hand to adapt to the
+                same geometry. The DS Standard Foundation exists because that is
+                not a reasonable thing to ask.
               </p>
               <p className="text-xl lg:text-2xl leading-[1.6] text-foreground/75 mt-8 indent-10">
-                Our mandate is simple yet considered: to remove pain from pedagogy, and
-                to make the entire repertoire accessible, so that musical expression
-                is governed by imagination, not by the span of a metacarpal.
+                Our work is simple in spirit: take pain out of learning the
+                instrument, and put the whole repertoire back within reach, so that
+                what a pianist can play is decided by what they can imagine, not
+                by the size of their hand.
               </p>
             </AnimatedSection>
           </section>
@@ -268,10 +269,10 @@ export default function Home2Page() {
           <section className="py-24">
             <div className="border-b border-border pb-6 mb-16 flex justify-between items-end">
               <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
-                Biomechanical Data &amp; Analysis
+                What the Research Shows
               </span>
               <span className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/50 font-[family-name:var(--font-inter)]">
-                MTNA National Convention, 2004 &amp; subsequent studies
+                MTNA 2004, and the work that followed
               </span>
             </div>
 
@@ -286,9 +287,9 @@ export default function Home2Page() {
                   Asymmetric Risk
                 </h4>
                 <p className="text-lg text-foreground/75 leading-relaxed">
-                  Of adult female pianists possess a hand span too small to execute
-                  the traditional repertoire on a conventional keyboard without
-                  cumulative strain.
+                  Of adult female pianists have a hand span too small for the
+                  traditional repertoire on a conventional keyboard. They can
+                  play it, but the body usually pays.
                 </p>
               </AnimatedSection>
 
@@ -302,9 +303,9 @@ export default function Home2Page() {
                   Years of Inquiry
                 </h4>
                 <p className="text-lg text-foreground/75 leading-relaxed">
-                  Decades of biometric study, university partnerships, and mechanical
-                  engineering dedicated to establishing global dimensional benchmarks
-                  for the keyboard.
+                  Years of measuring hands, building prototypes, and working with
+                  universities to figure out which keyboard sizes actually belong
+                  in the registry.
                 </p>
               </AnimatedSection>
 
@@ -319,9 +320,9 @@ export default function Home2Page() {
                   The DS Ratio
                 </h4>
                 <p className="text-lg text-foreground/75 leading-relaxed">
-                  A single geometric ratio (≈ 0.923) governs every certified
-                  specification, ensuring consistent scaling from conventional through
-                  child-sized keyboards.
+                  One ratio (≈ 0.923) holds every size in the registry together,
+                  from the conventional keyboard down through the smallest
+                  keyboards for children.
                 </p>
               </AnimatedSection>
             </div>
@@ -390,15 +391,15 @@ export default function Home2Page() {
 
               <div className="space-y-6 max-w-2xl">
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  The Foundation was established as the non-profit successor to
-                  Steinbuhler &amp; Company, carrying forward three decades of research
-                  into alternatively sized actions and the universities, conservatories,
-                  and pianists who now rely upon them.
+                  The Foundation grew out of Steinbuhler &amp; Company and now
+                  carries on its work as a non-profit. Thirty years of research,
+                  a few hundred retrofitted pianos, and a growing list of
+                  universities and conservatories came with it.
                 </p>
                 <p className="text-xl text-foreground/80 leading-relaxed">
-                  We credential manufacturers, support institutional acquisition, and
-                  maintain the biomechanical archive, so that the keyboard a pianist
-                  encounters tomorrow will be the one most fit for their hand.
+                  We vet the makers, help schools get keyboards into practice
+                  rooms, and keep the research going, so that the keyboard a
+                  pianist sits down to tomorrow is actually sized for them.
                 </p>
               </div>
 
@@ -450,9 +451,9 @@ export default function Home2Page() {
                 Correspondence with the Foundation
               </h3>
               <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-                Institutions, builders, pianists, and philanthropists seeking to support
-                the archive, verify a builder&rsquo;s credentials, or apply for collegiate
-                implementation may write to the board of directors.
+                If you teach at a school thinking about a DS keyboard, build pianos
+                and want to be credentialed, play and have questions, or would like
+                to help fund the work, the board would like to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

@@ -34,7 +34,23 @@ const purposes = [
   },
 ]
 
-const boardMembers = [
+type BoardLink = {
+  label: string
+  href: string
+}
+
+type BoardMember = {
+  plate: string
+  name: string
+  role: string
+  image: string
+  imageClassName?: string
+  description: string
+  paragraphs?: string[]
+  links?: BoardLink[]
+}
+
+const boardMembers: BoardMember[] = [
   {
     plate: "Pl. 01",
     name: "David Steinbuhler",
@@ -42,6 +58,10 @@ const boardMembers = [
     image: "/the_ds_standard_David-Linda.jpg",
     description:
       "Drawing on a career in computer science and engineering, David has spent the last three decades developing a practical way to retrofit acoustic pianos with the highest quality alternatively sized keyboards. In May of 2018 he converted his manufacturing business, Steinbuhler & Company, into the non-profit DS Standard Foundation.",
+    paragraphs: [
+      "Supported by academic research, he has established keyboard sizes that comfortably accommodate virtually every hand.",
+      "The non-profit DS Standard Foundation, which facilitates the study of these keyboards at schools and universities around the world, continues that work today.",
+    ],
   },
   {
     plate: "Pl. 02",
@@ -60,6 +80,9 @@ const boardMembers = [
     imageClassName: "object-top scale-[1.75] origin-[50%_20%]",
     description:
       "Grandson of the Foundation's founder, Alex is committed to carrying the manufacturing work forward. Since 2016 he has built piano actions by hand and developed a high level of skill in every aspect of their construction.",
+    paragraphs: [
+      "Since 2019 he has also maintained the Foundation's operational books.",
+    ],
   },
   {
     plate: "Pl. 04",
@@ -67,7 +90,21 @@ const boardMembers = [
     role: "Board Member",
     image: "/the_ds_standard_Carol-Leone-with-keyboard-Corped.jpg",
     description:
-      "Chair of Piano Studies and Professor of Piano at Southern Methodist University's Meadows School of the Arts in Dallas, Texas. Widely regarded as today's leading performer, teacher, and researcher on alternatively sized keyboards for pianists with smaller hands.",
+      "Chair of Piano Studies and Professor of Piano at Southern Methodist University's Meadows School of the Arts in Dallas, Texas, Carol has taught and performed throughout the USA, Europe, and Asia, winning both prizes and acclaim in such venues as the National Beethoven Sonata Competition, the Missouri Southern International Piano Competition, and the International Masters Competition.",
+    paragraphs: [
+      "Her professional training included study at the renowned Curtis Institute of Music in Philadelphia, where she was a student of the Polish pianist Mieczyslaw Horszowski. She was also a student of Guido Agosti in Rome and holds the prestigious Honors Diploma from the Accademia Chigiana in Siena, Italy.",
+      "Considered today's leading performer, teacher, and researcher on alternatively sized piano keyboards for the benefit of pianists with smaller hand spans, Carol has been published in journals such as American Music Teacher, Piano Professional, and Clavier Companion. Southern Methodist University was the first institution of higher learning to provide alternatively sized keyboards for students who wish to use them.",
+    ],
+    links: [
+      {
+        label: "carolleone.com/ergonomic-keyboards",
+        href: "https://www.carolleone.com/ergonomic-keyboards",
+      },
+      {
+        label: "YouTube channel",
+        href: "https://www.youtube.com/@carolleonepianist",
+      },
+    ],
   },
   {
     plate: "Pl. 05",
@@ -75,7 +112,17 @@ const boardMembers = [
     role: "Board Member",
     image: "/about_rhonda-boyle.jpg",
     description:
-      "An eager student of the piano since her childhood in Melbourne, Australia, and an environmental scientist by profession with expertise in urban planning. In 2009 Rhonda became the first pianist in Australia to own and play a DS5.5 Keyboard.",
+      "An eager student of the piano since her childhood in Melbourne, Australia, and an environmental scientist with expertise in urban planning. In 2009 Rhonda was the first pianist in Australia to own and play a DS5.5 Keyboard.",
+    paragraphs: [
+      "Her extensive research relating to hand size and the piano has resulted in invitations to speak at piano conferences in Australia, Europe, and the USA. She has been published in the Music Teachers National Association e-Journal (USA) and the European Piano Teachers Association journal Piano Professional (UK).",
+      "Rhonda co-founded the global network PASK (Pianists for Alternatively Sized Keyboards) with Erica Booker (Sydney) and Professor Carol Leone (SMU, Texas). The website paskpiano.org includes information on research, activities, and developments relevant to alternatively sized piano keyboards.",
+    ],
+    links: [
+      {
+        label: "paskpiano.org",
+        href: "https://www.paskpiano.org",
+      },
+    ],
   },
   {
     plate: "Pl. 06",
@@ -84,6 +131,12 @@ const boardMembers = [
     image: "/about_chasepeter.jpg",
     description:
       "Added in February 2025 to help secure the future of the Foundation's manufacturing operations. They also run a family-owned textile business that has been thriving in Titusville, Pennsylvania since 1897.",
+    links: [
+      {
+        label: "The Ribbon Factory, family-owned and operated since 1897",
+        href: "https://www.ribbonfactory.com/about.html",
+      },
+    ],
   },
 ]
 
@@ -291,12 +344,24 @@ export default function About2Page() {
               >
                 &ldquo;
               </span>
-              <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground mb-12 relative z-10">
+              <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground mb-10 relative z-10">
                 Having the opportunity to perform and teach on DS keyboards for the
                 last 20 years has been an incredible gift. To fearlessly approach
                 any significant work in the repertoire, knowing that it is within
                 your grasp and that you needn&rsquo;t fear injury, has been a dream
                 come true for me and for my students with smaller hand spans.
+              </p>
+              <p className="font-[family-name:var(--font-display)] text-xl md:text-2xl lg:text-3xl leading-relaxed italic text-foreground/85 mb-12 relative z-10">
+                That this previously unimaginable breakthrough hasn&rsquo;t been
+                fully embraced yet is inconceivable to me, but I hope that in the
+                culture of the 2020s, inflexible tradition will give way to
+                reason. When one considers that 87% of adult females, 24% of
+                adult males, and 100% of young children are musically and
+                technically limited by a keyboard size that is too large for
+                them, and that injuries continue at a wholly unacceptable rate,
+                the only logical solution is to offer alternative standards.
+                I&rsquo;m very grateful to the DS Standard Foundation for leading
+                this initiative globally.
               </p>
               <div className="flex flex-col items-center">
                 <div className="w-12 h-px bg-primary mb-4" />
@@ -304,7 +369,7 @@ export default function About2Page() {
                   Dr. Carol Leone
                 </cite>
                 <span className="text-sm italic text-foreground/60 mt-1">
-                  Chair of Piano Studies, SMU Meadows School of the Arts
+                  Chair of Piano Studies, Professor of Piano, SMU Meadows School of the Arts, Dallas, Texas
                 </span>
               </div>
             </AnimatedSection>
@@ -358,11 +423,84 @@ export default function About2Page() {
                       <p className="text-base text-foreground/75 leading-relaxed">
                         {member.description}
                       </p>
+                      {member.paragraphs?.map((para, pIdx) => (
+                        <p
+                          key={pIdx}
+                          className="text-base text-foreground/75 leading-relaxed"
+                        >
+                          {para}
+                        </p>
+                      ))}
+                      {member.links && member.links.length > 0 && (
+                        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+                          {member.links.map((link) => (
+                            <li key={link.href}>
+                              <Link
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block text-[0.65rem] uppercase tracking-[0.2em] font-medium text-foreground/70 border-b border-transparent hover:border-primary hover:text-primary transition-colors font-[family-name:var(--font-inter)] pb-0.5"
+                              >
+                                {link.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </article>
                 </AnimatedSection>
               ))}
             </div>
+          </section>
+
+          {/* vertical hairline divider */}
+          <div className="w-full h-24 flex justify-center items-center">
+            <div className="w-px h-full bg-border" />
+          </div>
+
+          {/* 7b. Lister-Sink pull quote (three-part) */}
+          <section className="py-32 my-16 bg-card border-y border-border relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-background border border-border rounded-full flex items-center justify-center">
+              <span className="font-[family-name:var(--font-display)] text-lg text-accent leading-none">❦</span>
+            </div>
+
+            <AnimatedSection className="max-w-4xl mx-auto px-8 text-center relative">
+              <span
+                aria-hidden
+                className="font-[family-name:var(--font-display)] text-[10rem] leading-none text-border absolute -top-20 left-0 select-none pointer-events-none"
+              >
+                &ldquo;
+              </span>
+              <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground mb-8 relative z-10">
+                I cannot begin to describe the career-changing, and even
+                life-changing, benefits our students have reaped from having
+                these instruments to practice on daily. Their first response
+                though was, &ldquo;Why did it take so long? Why did we have to
+                suffer so unnecessarily?&rdquo;
+              </p>
+              <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground mb-8 relative z-10">
+                Playing-related injury in the piano world is persistently and
+                tragically prevalent; consensus among researchers is that female
+                pianists are twice as likely to develop an injury, and smaller
+                hands are implicated.
+              </p>
+              <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground mb-12 relative z-10">
+                Since the NASM now requires some form of education in
+                injury-prevention and musculoskeletal health, it seems almost
+                imperative that accredited music departments in the US acquire
+                such keyboards. Addressing this glaring inequity is long overdue.
+              </p>
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-px bg-primary mb-4" />
+                <cite className="text-[0.7rem] uppercase tracking-[0.25em] font-semibold text-foreground not-italic block font-[family-name:var(--font-inter)]">
+                  Barbara Lister-Sink, Ed.D.
+                </cite>
+                <span className="text-sm italic text-foreground/60 mt-1 max-w-xl">
+                  Salem College School of Music, Director, Graduate Music Program. Producer of the DVD Freeing the Caged Bird: Developing Well-Coordinated, Injury-Preventive Piano Technique.
+                </span>
+              </div>
+            </AnimatedSection>
           </section>
 
           {/* vertical hairline divider */}
@@ -476,6 +614,34 @@ export default function About2Page() {
                 >
                   Support the Mission
                 </Link>
+              </div>
+            </AnimatedSection>
+          </section>
+
+          {/* 10. Acknowledgements */}
+          <section className="py-16 border-t border-border">
+            <AnimatedSection>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 items-start">
+                <div className="md:col-span-4 lg:col-span-3">
+                  <h2 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
+                    Acknowledgements
+                  </h2>
+                </div>
+                <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-5">
+                  <p className="text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
+                    The sources of the images and other media used on this
+                    website are listed in our acknowledgements document.
+                  </p>
+                  <Link
+                    href="/DS-Foundation-website-acknowledgements.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center self-start text-[0.65rem] uppercase tracking-[0.2em] font-medium text-foreground/70 border-b border-transparent hover:border-primary hover:text-primary transition-colors font-[family-name:var(--font-inter)] pb-0.5"
+                  >
+                    Read the acknowledgements (PDF)
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </Link>
+                </div>
               </div>
             </AnimatedSection>
           </section>

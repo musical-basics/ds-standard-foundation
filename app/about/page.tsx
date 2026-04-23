@@ -410,24 +410,26 @@ export default function About2Page() {
                     <figure className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
                       <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
                       {member.splitImage ? (
-                        <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)] grid grid-cols-2 gap-1 bg-card">
+                        <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)] grid grid-rows-2 gap-1 bg-card">
                           <div className="relative overflow-hidden">
-                            <Image
-                              src={member.image}
-                              alt={`${member.name} (left)`}
-                              fill
-                              className="object-cover"
-                              style={{ objectPosition: "left center" }}
-                            />
+                            <div className="absolute inset-y-0 left-0 w-[200%]">
+                              <Image
+                                src={member.image}
+                                alt={`${member.name} (Chase)`}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
                           </div>
                           <div className="relative overflow-hidden">
-                            <Image
-                              src={member.image}
-                              alt={`${member.name} (right)`}
-                              fill
-                              className="object-cover"
-                              style={{ objectPosition: "right center" }}
-                            />
+                            <div className="absolute inset-y-0 right-0 w-[200%]">
+                              <Image
+                                src={member.image}
+                                alt={`${member.name} (Peter)`}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
                           </div>
                         </div>
                       ) : (

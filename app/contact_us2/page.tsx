@@ -1,272 +1,340 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/animated-section"
+import { Button } from "@/components/ui/button"
+import { Mail, Facebook, Youtube, ArrowRight } from "lucide-react"
 
-type Director = {
-  plate: string
-  name: string
-  role: string
-  image: string
-  email: string
-  description: string
-}
-
-const directors: Director[] = [
+const directors = [
   {
-    plate: "Pl. 01",
     name: "David Steinbuhler",
     role: "President",
     image: "/the_ds_standard_David-Linda.jpg",
     email: "dskeyboards@tbscc.com",
-    description:
-      "Handles inquiries about the DS Standard itself, the manufacture of DS Keyboards, and customers looking to purchase.",
+    description: "For inquiries about the DS Standard, the manufacture of DS Keyboards, and for customers interested in a purchase.",
   },
   {
-    plate: "Pl. 02",
     name: "Barry Cressman",
     role: "Secretary",
     image: "/about_Barry_Cressman.jpg",
     email: "bcressman@zoominternet.net",
-    description:
-      "Handles general questions about the Foundation and incoming donations.",
+    description: "For general inquiries about the Foundation and donations to the Foundation.",
   },
   {
-    plate: "Pl. 03",
     name: "Carol Leone",
     role: "Board Member",
     image: "/the_ds_standard_Carol-Leone-with-keyboard-Corped.jpg",
     email: "cleone@mail.smu.edu",
-    description:
-      "Handles outreach from educational institutions curious about how the Foundation might help them.",
+    description: "For inquiries from educational institutions with an interest in discussing how the Foundation might help them.",
   },
   {
-    plate: "Pl. 04",
     name: "Rhonda Boyle",
     role: "Board Member",
     image: "/about_rhonda-boyle.jpg",
     email: "info@paskpiano.org",
-    description:
-      "Handles questions about hand-size research and the Pianists for Alternatively Sized Keyboards (PASK) network.",
+    description: "For general inquiries about research into hand size and the DS Standard and those interested in connecting with the Pianists for Alternatively Sized Keyboards network.",
   },
 ]
 
-export default function ContactUs2Page() {
+export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-[family-name:var(--font-body)]">
-      {/* Masthead / dateline */}
-      <div className="fixed top-0 right-0 z-40 px-6 md:px-10 lg:px-16 py-7 pointer-events-none">
-        <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right pointer-events-auto">
-          <span>Est. 1993</span>
-          <span className="hidden sm:inline mx-3 text-border">|</span>
-          <span className="hidden sm:inline">501(c)(3)</span>
-        </div>
-      </div>
-
+    <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/40 to-background" />
+      {/* Hero Section */}
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <p className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-8 font-[family-name:var(--font-inter)]">
-              Office of Correspondence
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
+              Get in Touch
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-foreground mb-10 text-balance">
-              Correspondence &amp;
-              <br />
-              <span className="italic font-light text-primary">the Foundation.</span>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8">
+              Contact Us
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl leading-relaxed">
-              For a small foundation, the best way to reach us is to write to the person
-              whose portfolio your question touches. Each member of the board looks after
-              a distinct part of our work.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance">
+              Have questions about the DS Standard? We&apos;re here to help.
+              Reach out to the appropriate director based on your inquiry.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Vertical hairline */}
-      <div className="w-full h-24 flex justify-center items-center">
-        <div className="w-px h-full bg-border" />
-      </div>
-
-      {/* Directory of board members */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
-            <AnimatedSection>
-              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl italic text-primary">
-                The Directory
+      {/* Directors Section */}
+      <section className="py-32 bg-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+                Foundation Directors
               </h2>
-            </AnimatedSection>
-            <AnimatedSection delay={100}>
-              <p className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 font-[family-name:var(--font-inter)]">
-                Board of Directors &middot; 2026
+              <p className="text-xl text-muted-foreground">
+                Contact the right person for your inquiry
               </p>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-20">
-            {directors.map((d, index) => (
-              <AnimatedSection key={d.name} delay={index * 100}>
-                <article className="flex flex-col">
-                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
-                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {directors.map((director, index) => (
+              <AnimatedSection key={director.name} delay={index * 100}>
+                <div className="p-8 bg-background rounded-3xl border border-border hover:border-primary/30 transition-all duration-500 h-full flex flex-col">
+                  {director.image && (
+                    <div className="mb-6 relative aspect-video rounded-xl overflow-hidden bg-muted/30">
                       <Image
-                        src={d.image}
-                        alt={d.name}
+                        src={director.image}
+                        alt={director.name}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
-                  </figure>
-
-                  <div className="mt-6 flex flex-col">
-                    <span className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/50 font-[family-name:var(--font-inter)] border-b border-border/60 pb-2 mb-5 inline-block self-start">
-                      {d.plate}
-                    </span>
-                    <h3 className="font-[family-name:var(--font-display)] text-3xl text-foreground mb-2">
-                      {d.name}
+                  )}
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {director.name}
                     </h3>
-                    <p className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-5 font-[family-name:var(--font-inter)]">
-                      {d.role}
-                    </p>
-                    <p className="text-lg leading-relaxed text-foreground/80 mb-6">
-                      {d.description}
-                    </p>
-                    <a
-                      href={`mailto:${d.email}`}
-                      className="text-[0.7rem] uppercase tracking-[0.2em] font-medium text-foreground hover:text-primary transition-colors font-[family-name:var(--font-inter)] border-b border-transparent hover:border-primary pb-1 self-start"
-                    >
-                      {d.email}
-                    </a>
+                    <p className="text-primary font-medium">{director.role}</p>
                   </div>
-                </article>
+
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                    {director.description}
+                  </p>
+
+                  <a
+                    href={`mailto:${director.email}`}
+                    className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium group"
+                  >
+                    <Mail className="h-5 w-5" />
+                    <span>{director.email}</span>
+                    <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </a>
+                </div>
               </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vertical hairline */}
-      <div className="w-full h-24 flex justify-center items-center">
-        <div className="w-px h-full bg-border" />
-      </div>
+      {/* Testimonial */}
+      <section className="py-24 bg-muted">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 text-center text-balance">
+              &ldquo;The DS keyboard has offered our piano students at the University of Memphis
+              a wonderful opportunity to expand their repertoire. It has promoted talent
+              inclusivity amongst different hand sizes. For those students with smaller hand
+              spans, it has changed our lesson focus to artistic concepts of phrasing, color,
+              and dynamic shaping vs. discussing the cumbersome aspects of a piece for their
+              hands.&rdquo;
+            </blockquote>
+          </AnimatedSection>
 
-      {/* Address + 501(c)(3) block */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimatedSection delay={100}>
+            <div className="text-center">
+              <p className="text-foreground font-semibold">Dr. Artina McCain</p>
+              <p className="text-muted-foreground">
+                Assistant Professor of Piano, Coordinator of Piano Studies
+                <br />
+                The University of Memphis Rudi E. Scheidt School of Music
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Social & Address */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Social Media */}
+            {/* Social Media */}
             <AnimatedSection>
-              <div className="p-8 md:p-10 border border-border bg-card/60 h-full">
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-6 font-[family-name:var(--font-inter)]">
-                  Mailing Address
-                </p>
-                <address className="not-italic text-lg md:text-xl leading-relaxed text-foreground">
-                  DS Standard Foundation
-                  <br />
-                  600 North Brown Street
-                  <br />
-                  Titusville, Pennsylvania 16354
-                  <br />
-                  USA
-                </address>
+              <div className="p-8 bg-card rounded-3xl border border-border h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">
+                    Connect With Us
+                  </h3>
+                  <p className="text-muted-foreground mb-8">
+                    Follow our journey and stay updated on the latest news, events, and
+                    research related to alternatively sized keyboards.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <a
+                    href="http://facebook.com/dsstandardfoundation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 px-6 py-4 bg-background rounded-2xl border border-border hover:border-primary/30 transition-all group"
+                  >
+                    <Facebook className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      Facebook
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLHBn-VaaOCGcGEZpA2CFBsMVP2RvcfiXb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 px-6 py-4 bg-background rounded-2xl border border-border hover:border-primary/30 transition-all group"
+                  >
+                    <Youtube className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      YouTube
+                    </span>
+                  </a>
+                </div>
               </div>
             </AnimatedSection>
 
+            {/* Address */}
             <AnimatedSection delay={100}>
-              <div className="p-8 md:p-10 border border-border bg-card/60 h-full">
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-6 font-[family-name:var(--font-inter)]">
-                  Tax Status
-                </p>
-                <p className="text-lg md:text-xl leading-relaxed text-foreground">
-                  The Foundation operates as a registered 501(c)(3) non-profit
-                  organization. Contributions by US citizens are tax-deductible to the
-                  fullest extent permitted by law.
-                </p>
+              <div className="p-8 bg-card rounded-3xl border border-border h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">
+                    Mailing Address
+                  </h3>
+                  <div className="space-y-2 text-muted-foreground text-lg mb-8">
+                    <p>
+                      <strong className="text-foreground">DS Standard Foundation</strong>
+                    </p>
+                    <p>600 North Brown Street</p>
+                    <p>Titusville, Pennsylvania 16354</p>
+                    <p>USA</p>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-muted/50 rounded-xl">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    <strong className="text-foreground block mb-1">501(c)(3) Non-Profit</strong>
+                    The DS Standard Foundation is a registered non-profit organization.
+                    Contributions by US citizens are tax-deductible.
+                  </p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Vertical hairline */}
-      <div className="w-full h-24 flex justify-center items-center">
-        <div className="w-px h-full bg-border" />
-      </div>
+      {/* Quick Links */}
+      <section className="py-32 bg-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Quick Links
+              </h2>
+              <p className="text-muted-foreground">
+                Explore more about the DS Standard Foundation
+              </p>
+            </div>
+          </AnimatedSection>
 
-      {/* In the Public Record + closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <AnimatedSection>
-              <div className="flex flex-col gap-5">
-                <h4 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
-                  In the Public Record
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <AnimatedSection delay={100}>
+              <Link
+                href="/the_ds_standard"
+                className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
+              >
+                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  The DS Standard
                 </h4>
-                <ul className="flex flex-col gap-4">
-                  <li>
-                    <a
-                      href="http://facebook.com/dsstandardfoundation"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-5 text-[0.7rem] uppercase tracking-[0.2em] text-foreground font-[family-name:var(--font-inter)]"
-                    >
-                      <span className="text-border group-hover:text-primary transition-colors">
-                        Vol. 1
-                      </span>
-                      <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-colors group-hover:text-primary">
-                        Facebook Dispatches
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.youtube.com/playlist?list=PLHBn-VaaOCGcGEZpA2CFBsMVP2RvcfiXb"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-5 text-[0.7rem] uppercase tracking-[0.2em] text-foreground font-[family-name:var(--font-inter)]"
-                    >
-                      <span className="text-border group-hover:text-primary transition-colors">
-                        Vol. 2
-                      </span>
-                      <span className="border-b border-transparent group-hover:border-primary pb-0.5 transition-colors group-hover:text-primary">
-                        YouTube Archives
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Learn about our research
+                </p>
+              </Link>
             </AnimatedSection>
 
-            <AnimatedSection delay={100}>
-              <div className="flex flex-col items-start md:items-end gap-6 text-left md:text-right">
-                <p className="italic text-foreground/70 text-lg max-w-sm">
-                  To read further on the Foundation&apos;s history and the people behind
-                  the work.
+            <AnimatedSection delay={200}>
+              <Link
+                href="/products"
+                className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
+              >
+                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Products
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Explore our keyboards
                 </p>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-background border border-foreground bg-foreground hover:bg-primary hover:border-primary transition-colors font-[family-name:var(--font-inter)]"
-                >
-                  Consult the About Page
-                </Link>
-              </div>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={300}>
+              <Link
+                href="/projects"
+                className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
+              >
+                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Projects
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  See our impact
+                </p>
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection delay={400}>
+              <Link
+                href="/donations"
+                className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
+              >
+                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Donations
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Support our mission
+                </p>
+              </Link>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-32 bg-foreground text-background">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-balance">
+              Ready to Get Started?
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection delay={100}>
+            <p className="text-xl text-background/80 mb-12 text-balance">
+              Whether you&apos;re a pianist looking for the right keyboard size or an
+              institution interested in our programs, we&apos;re excited to hear from you.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="secondary" size="lg" className="rounded-full px-8">
+                <a href="mailto:dskeyboards@tbscc.com">
+                  Email Us
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full px-8 border-background/30 text-background hover:bg-background/10 bg-transparent"
+              >
+                <Link href="/about">Learn About Us</Link>
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

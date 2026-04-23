@@ -5,629 +5,394 @@ import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/animated-section"
+import { StickySection } from "@/components/sticky-section"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Mail, Phone, Check } from "lucide-react"
 
-const grandOfferings = [
+const grandPianoOptions = [
   {
-    name: "Complete New Action",
-    price: "US$16,800",
-    badge: "Concert Grade",
-    badgeVariant: "solid" as const,
-    lede:
-      "A complete new action with its own stack, built around new hammers and wippens. Interchangeable with the original keyboard in about five minutes.",
-    specs: [
-      { label: "Includes", value: "New hammers and wippens on a new action stack" },
-      { label: "Swap Time", value: "Approximately five minutes" },
-      { label: "Build Time", value: "Ships back a few days after measuring" },
-      { label: "Best For", value: "Concert stage and touring instruments" },
+    title: "Complete New Action",
+    price: "$16,800",
+    description: "A complete new action with its own action stack (new hammers and wippens)",
+    features: [
+      "New hammers and wippens included",
+      "Interchangeable with original keyboard in ~5 minutes",
+      "Perfect for concert stage use",
+      "Ships back a few days after measuring",
     ],
+    highlight: true,
   },
   {
-    name: "DS Standard Keyboard",
-    price: "US$10,800",
-    badge: "Studio Favorite",
-    badgeVariant: "outline" as const,
-    lede:
-      "A new DS Standard frame mounted with the piano's original hammers and wippens. Preserves the instrument's voice and can be reversed at any time by a competent technician.",
-    specs: [
-      { label: "Includes", value: "New frame with original hammers and wippens" },
-      { label: "Voice", value: "Preserves the piano's original sound" },
-      { label: "Build Time", value: "Approximately three months after measuring" },
-      { label: "Best For", value: "Studios, teaching pianos, private residences" },
+    title: "DS Standard Keyboard",
+    price: "$10,800",
+    description: "A DS Standard keyboard with new frame using original action stack",
+    features: [
+      "Original hammers and wippens mounted on new frame",
+      "Preserves piano's original sound",
+      "Technician can restore original keyboard",
+      "3 months build time after measuring",
     ],
+    highlight: false,
   },
 ]
 
-const adultSizes = [
-  {
-    name: "DS6.5",
-    badge: "Conventional",
-    badgeVariant: "outline" as const,
-    octave: '6.500" (165.1 mm)',
-    width: '48.25"',
-    note: "The historical default. Documented as punishing for the majority of adult female pianists and a substantial share of adult male pianists.",
-  },
-  {
-    name: "DS6.0",
-    badge: "Universal",
-    badgeVariant: "solid" as const,
-    octave: '6.000" (152.4 mm)',
-    width: '44.53"',
-    note: "The primary DS Standard specification. Restores natural relaxation across the broadest distribution of adult hands while allowing rapid adaptation from the conventional keyboard.",
-  },
-  {
-    name: "DS5.5",
-    badge: "7/8",
-    badgeVariant: "solid" as const,
-    octave: '5.538" (140.7 mm)',
-    width: '41.10"',
-    note: "Engineered for smaller adult hands. Gives a pianist of average span the geometry historically available only to large-handed virtuosi.",
-  },
-]
-
-const childSizes = [
-  {
-    name: "DS5.1",
-    octave: '5.100" (129.5 mm)',
-    width: '37.88"',
-    note: "A transitional specification for advancing adolescent students with smaller hand spans.",
-  },
-  {
-    name: "DS4.7",
-    octave: '4.700" (119.4 mm)',
-    width: '34.91"',
-    note: "Scaled for younger students, preserving the tactile ratios of the adult DS specifications.",
-  },
-]
-
-export default function Products2Page() {
+export default function ProductsPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-[family-name:var(--font-body)]">
-      {/* Fixed masthead, matches homepage */}
-      <div className="fixed top-0 right-0 z-40 px-6 md:px-10 lg:px-16 py-7 pointer-events-none">
-        <div className="text-[0.65rem] uppercase tracking-[0.25em] text-primary font-[family-name:var(--font-inter)] text-right pointer-events-auto">
-          <span>Est. 1993</span>
-          <span className="hidden sm:inline mx-3 text-border">|</span>
-          <span className="hidden sm:inline">501(c)(3)</span>
-        </div>
-      </div>
-
+    <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* 1. Masthead hero */}
-      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/40 to-background" />
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
+        <div className="absolute inset-0">
+          <Image
+            src="/products_yamahacfx.jpg"
+            alt="Yamaha CFX Grand Piano"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-background/80" />
+        </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <p className="text-[0.65rem] uppercase tracking-[0.3em] font-medium text-primary mb-8 font-[family-name:var(--font-inter)]">
-              Products / The Catalog
+            <p
+              className="text-sm uppercase tracking-[0.3em] text-foreground mb-6 font-semibold"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
+              Precision Crafted
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-foreground mb-8 text-balance">
-              The DS Standard
-              <br />
-              <span className="italic font-light text-primary">in Specimen and Specification</span>
+            <h1
+              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8"
+              style={{ textShadow: "0 4px 12px rgba(0,0,0,0.3)" }}
+            >
+              Products
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
-            <p className="text-xl md:text-2xl text-foreground/75 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
-              A working catalog of the keyboards and actions we build. Whether you are
-              outfitting a concert hall, a teaching studio, or a single beloved instrument
-              at home, the registry below is where the conversation usually begins.
+            <p
+              className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed text-balance"
+              style={{ textShadow: "0 2px 4px rgba(0,0,0,0.2)" }}
+            >
+              Two ways to bring the DS Standard to your grand piano, plus partnership
+              options for upright pianos.
             </p>
           </AnimatedSection>
-
-          <AnimatedSection delay={300}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact_us"
-                className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-background border border-foreground bg-foreground hover:bg-primary hover:border-primary transition-colors font-[family-name:var(--font-inter)]"
-              >
-                Begin an Inquiry
-              </Link>
-              <Link
-                href="/the_ds_standard"
-                className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
-              >
-                The Standard Explained
-              </Link>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
-      {/* 2. Plate hero image */}
-      <section className="pb-20">
+      {/* Featured Image */}
+      <section className="py-16 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
-              <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-              <div className="relative aspect-[3/1] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                <Image
-                  src="/products_yamahacfx.jpg"
-                  alt="Yamaha CFX concert grand fitted with a DS Standard keyboard"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </figure>
-            <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-              <span>Pl. I. DS5.5 fitted to Yamaha CFX, concert grand</span>
-              <span className="text-right">Pl. 001</span>
-            </figcaption>
+            <div className="relative aspect-[16/11] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/products_DS5.5-Yamaha-CFX-3-1024x711.jpg"
+                alt="DS5.5 keyboard on Yamaha CFX"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* hairline divider */}
-      <div className="w-full h-24 flex justify-center items-center">
-        <div className="w-px h-full bg-border" />
-      </div>
-
-      <div className="px-4 md:px-12 lg:px-24">
-        <main className="w-full max-w-[1400px] mx-auto">
-          {/* 3. The Ledger: grand piano offerings */}
-          <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
-            <div className="md:col-span-4 lg:col-span-3">
-              <div className="sticky top-28">
-                <h2 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)] mb-6">
-                  The Ledger
-                </h2>
-                <h3 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight mb-6">
-                  Grand Piano
-                  <br />
-                  <span className="italic font-light text-primary">Offerings</span>
-                </h3>
-                <p className="text-base text-foreground/70 leading-relaxed">
-                  Two ways to bring a DS Standard keyboard to a grand piano. In both cases
-                  the instrument&rsquo;s action travels to Titusville, Pennsylvania for precise
-                  measurement before we begin work. We provide the crate.
-                </p>
-              </div>
+      {/* Grand Piano Options */}
+      <section className="py-32 bg-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+                DS Standard for Grand Pianos
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Two options to purchase a DS Standard keyboard for your grand piano
+              </p>
             </div>
+          </AnimatedSection>
 
-            <AnimatedSection className="md:col-span-8 lg:col-span-9">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border border border-border">
-                {grandOfferings.map((option, index) => (
-                  <AnimatedSection key={option.name} delay={index * 100}>
-                    <article className="bg-background hover:bg-card transition-colors p-8 lg:p-12 h-full flex flex-col">
-                      <header className="flex justify-between items-center border-b border-border pb-4 mb-8">
-                        <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-foreground">
-                          {option.name}
-                        </h3>
-                        <span
-                          className={
-                            option.badgeVariant === "solid"
-                              ? "text-[0.65rem] uppercase tracking-[0.2em] px-2 py-1 bg-primary text-primary-foreground font-[family-name:var(--font-inter)]"
-                              : "text-[0.65rem] uppercase tracking-[0.2em] px-2 py-1 border border-accent/50 text-accent font-[family-name:var(--font-inter)]"
-                          }
-                        >
-                          {option.badge}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {grandPianoOptions.map((option, index) => (
+              <AnimatedSection key={option.title} delay={index * 100}>
+                <div
+                  className={`relative p-8 md:p-12 rounded-3xl border h-full flex flex-col ${option.highlight
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background border-border"
+                    }`}
+                >
+                  {option.highlight && (
+                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary-foreground/20 text-primary-foreground text-xs font-medium">
+                      Recommended
+                    </div>
+                  )}
+
+                  <div className="mb-6">
+                    <p className={`text-sm uppercase tracking-wider mb-2 ${option.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
+                      }`}>
+                      Option {index + 1}
+                    </p>
+                    <h3 className="text-2xl font-bold mb-2">{option.title}</h3>
+                    <p className={`${option.highlight ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+                      {option.description}
+                    </p>
+                  </div>
+
+                  <div className="mb-8">
+                    <p className="text-4xl font-bold">{option.price}</p>
+                    <p className={`text-sm ${option.highlight ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                      plus shipping and installation
+                    </p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8 flex-grow">
+                    {option.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <Check className={`h-5 w-5 flex-shrink-0 mt-0.5 ${option.highlight ? "text-primary-foreground" : "text-primary"
+                          }`} />
+                        <span className={option.highlight ? "text-primary-foreground/90" : "text-foreground"}>
+                          {feature}
                         </span>
-                      </header>
+                      </li>
+                    ))}
+                  </ul>
 
-                      <p className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-6">
-                        {option.price}
-                      </p>
-                      <p className="text-base text-foreground/75 italic leading-relaxed mb-8">
-                        {option.lede}
-                      </p>
-
-                      <dl className="text-sm font-[family-name:var(--font-inter)] mt-auto">
-                        {option.specs.map((spec) => (
-                          <div
-                            key={spec.label}
-                            className="py-3 flex justify-between gap-6 border-b border-border last:border-b-0"
-                          >
-                            <dt className="text-foreground/60 uppercase tracking-[0.15em] text-[0.65rem] pt-1">
-                              {spec.label}
-                            </dt>
-                            <dd className="font-medium text-foreground text-right">{spec.value}</dd>
-                          </div>
-                        ))}
-                      </dl>
-
-                      <div className="mt-8">
-                        <Link
-                          href="/contact_us"
-                          className="inline-flex items-center justify-center px-8 py-3 text-[0.7rem] uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
-                        >
-                          Inquire
-                        </Link>
-                      </div>
-                    </article>
-                  </AnimatedSection>
-                ))}
-              </div>
-
-              <p className="mt-8 text-sm text-foreground/60 italic leading-relaxed max-w-3xl">
-                Plus shipping and installation. For both offerings the action must first be
-                sent to us in Titusville, Pennsylvania for precise measurement. We provide a
-                shipping box for that purpose.
-              </p>
-            </AnimatedSection>
-          </section>
-
-          <hr className="border-t border-border" />
-
-          {/* 4. Adult size ledger (specimen cards) */}
-          <section className="py-32">
-            <div className="mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
-              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl italic text-primary">
-                Adult Sizes, at a Glance
-              </h2>
-              <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
-                Certified Dimensions
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-border border border-border">
-              {adultSizes.map((size, index) => (
-                <AnimatedSection key={size.name} delay={index * 100}>
-                  <article className="bg-background hover:bg-card transition-colors p-8 lg:p-12 h-full">
-                    <header className="flex justify-between items-center border-b border-border pb-4 mb-8">
-                      <h3 className="font-[family-name:var(--font-display)] text-3xl text-foreground">
-                        {size.name}
-                        <sup className="text-sm">®</sup>
-                      </h3>
-                      <span
-                        className={
-                          size.badgeVariant === "solid"
-                            ? "text-[0.65rem] uppercase tracking-[0.2em] px-2 py-1 bg-primary text-primary-foreground font-[family-name:var(--font-inter)]"
-                            : "text-[0.65rem] uppercase tracking-[0.2em] px-2 py-1 border border-accent/50 text-accent font-[family-name:var(--font-inter)]"
-                        }
-                      >
-                        {size.badge}
-                      </span>
-                    </header>
-                    <dl className="text-sm font-[family-name:var(--font-inter)]">
-                      <div className="py-3 flex justify-between border-b border-border">
-                        <dt className="text-foreground/60">Octave Span</dt>
-                        <dd className="font-medium text-foreground">{size.octave}</dd>
-                      </div>
-                      <div className="py-3 flex justify-between">
-                        <dt className="text-foreground/60">Overall Width</dt>
-                        <dd className="font-medium text-foreground">{size.width}</dd>
-                      </div>
-                    </dl>
-                    <p className="mt-6 text-base text-foreground/75 italic leading-relaxed">
-                      {size.note}
-                    </p>
-                  </article>
-                </AnimatedSection>
-              ))}
-            </div>
-
-            {/* Child sizes appendix */}
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
-              {childSizes.map((size, index) => (
-                <AnimatedSection key={size.name} delay={index * 100}>
-                  <article className="bg-background hover:bg-card transition-colors p-8 lg:p-10 h-full">
-                    <header className="flex justify-between items-center border-b border-border pb-4 mb-6">
-                      <h4 className="font-[family-name:var(--font-display)] text-2xl text-foreground">
-                        {size.name}
-                      </h4>
-                      <span className="text-[0.65rem] uppercase tracking-[0.2em] px-2 py-1 border border-accent/50 text-accent font-[family-name:var(--font-inter)]">
-                        Student
-                      </span>
-                    </header>
-                    <dl className="text-sm font-[family-name:var(--font-inter)]">
-                      <div className="py-2 flex justify-between border-b border-border">
-                        <dt className="text-foreground/60">Octave Span</dt>
-                        <dd className="font-medium text-foreground">{size.octave}</dd>
-                      </div>
-                      <div className="py-2 flex justify-between">
-                        <dt className="text-foreground/60">Overall Width</dt>
-                        <dd className="font-medium text-foreground">{size.width}</dd>
-                      </div>
-                    </dl>
-                    <p className="mt-4 text-sm text-foreground/75 italic leading-relaxed">
-                      {size.note}
-                    </p>
-                  </article>
-                </AnimatedSection>
-              ))}
-            </div>
-          </section>
-
-          <hr className="border-t border-border" />
-
-          {/* 5. Bass and treble engineering */}
-          <section className="py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <AnimatedSection className="lg:col-span-7">
-              <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
-                <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                <div className="relative aspect-[16/11] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                  <Image
-                    src="/products_Bass-Treble-Engineering-1024x696.jpg"
-                    alt="Bass to treble engineering of the DS Standard keyboard"
-                    fill
-                    className="object-cover"
-                  />
+                  <Button
+                    asChild
+                    variant={option.highlight ? "secondary" : "default"}
+                    className="rounded-full w-full"
+                  >
+                    <Link href="/contact_us">
+                      Inquire Now <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
-              </figure>
-              <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                <span>Fig. II. Bass to treble engineering</span>
-                <span className="text-right">Pl. 018</span>
-              </figcaption>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
+          </div>
 
-            <AnimatedSection delay={150} className="lg:col-span-5 flex flex-col justify-center">
-              <span className="mb-6 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
+          <AnimatedSection delay={200}>
+            <div className="mt-12 p-6 bg-muted rounded-2xl text-center">
+              <p className="text-muted-foreground">
+                <strong className="text-foreground">Note:</strong> For both options, your action must
+                first be sent to us in Titusville, PA for precise measurements. We provide
+                a shipping box for this purpose.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Engineering Section */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center mb-16 max-w-3xl mx-auto">
+              <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4">
                 Precision Engineering
-              </span>
-              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground leading-tight mb-8">
-                Bass to Treble,
-                <br />
-                <span className="italic font-light text-primary">by the Millimetre.</span>
+              </p>
+              <h2 className="text-4xl font-bold tracking-tight text-foreground mb-6">
+                Built to Concert Standards
               </h2>
-
-              <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Every DS Standard keyboard is precision engineered using the same computer
-                  driven manufacturing processes we have refined over three decades. The
-                  result is quiet, consistent, and remarkably easy for a technician to live
-                  with.
+                  Every DS Standard keyboard is precision-engineered using computer-driven
+                  manufacturing processes developed over three decades.
                 </p>
                 <p>
-                  The design of key leveling alone is a small piece of genius. What used to
-                  be a delicate, patience testing adjustment has become a fifteen minute job,
-                  and every other regulation step benefits from the same dimensional
-                  discipline.
+                  The engineering is extremely accurate in all regards. The design of key
+                  leveling alone is genius and has made what was once a complex adjustment
+                  into a fifteen minute job.
                 </p>
                 <p>
-                  From the strength of the keys through the response of the action, every
-                  component is built to meet the standards of serious professional use, and
-                  to keep meeting them decade after decade.
+                  From the strength of the keys to the response of the action, every component
+                  meets the highest standards for professional use.
                 </p>
               </div>
-
-              <div className="mt-10 pt-8 border-t border-border">
-                <dl className="grid grid-cols-2 gap-8">
-                  <div>
-                    <dt className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 font-[family-name:var(--font-inter)] mb-2">
-                      Leveling
-                    </dt>
-                    <dd className="font-[family-name:var(--font-display)] text-2xl text-primary">
-                      ~15 minutes
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 font-[family-name:var(--font-inter)] mb-2">
-                      Manufacturing
-                    </dt>
-                    <dd className="font-[family-name:var(--font-display)] text-2xl text-primary">
-                      CNC milled
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 font-[family-name:var(--font-inter)] mb-2">
-                      Swap Time
-                    </dt>
-                    <dd className="font-[family-name:var(--font-display)] text-2xl text-primary">
-                      ~5 minutes
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/60 font-[family-name:var(--font-inter)] mb-2">
-                      Calibration
-                    </dt>
-                    <dd className="font-[family-name:var(--font-display)] text-2xl text-primary">
-                      Concert grade
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </AnimatedSection>
-          </section>
-
-          <hr className="border-t border-border" />
-
-          {/* 6. Technician's kit / field report */}
-          <section className="py-32 my-8 bg-card border-y border-border relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-background border border-border rounded-full flex items-center justify-center">
-              <span className="font-[family-name:var(--font-display)] text-lg text-accent leading-none">&#10086;</span>
             </div>
+          </AnimatedSection>
 
-            <AnimatedSection className="max-w-4xl mx-auto px-8 text-center relative">
-              <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-10 inline-block font-[family-name:var(--font-inter)]">
-                Fig. III / Field Report
-              </span>
-              <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl lg:text-4xl leading-snug italic text-foreground mb-12 relative z-10">
-                &ldquo;As the piano technician at Ohio University, I am pleased to add my voice
-                to those praising the DS Standard keyboards. From a technical standpoint,
-                these pianos are a joy to work on. The engineering is extremely accurate in
-                all regards. I am continually impressed with the precision and manufacture
-                of all the components.&rdquo;
-              </p>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-px bg-primary mb-4" />
-                <cite className="text-[0.7rem] uppercase tracking-[0.25em] font-semibold text-foreground not-italic block font-[family-name:var(--font-inter)]">
-                  Christopher D. Purdy, R.P.T.
-                </cite>
-                <span className="text-sm italic text-foreground/60 mt-1">
-                  Registered Piano Technician, Ohio University School of Music
-                </span>
-              </div>
-            </AnimatedSection>
-          </section>
+          <AnimatedSection delay={200}>
+            <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl bg-card">
+              <Image
+                src="/products_Bass-Treble-Engineering-1024x696.jpg"
+                alt="DS Standard keyboard engineering details"
+                fill
+                className="object-contain p-4"
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-          <hr className="border-t border-border" />
+      {/* Technician Quote */}
+      <section className="py-24 bg-foreground text-background">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <blockquote className="text-xl md:text-2xl leading-relaxed mb-8 text-center text-balance">
+              &ldquo;As the piano technician at Ohio University, I am pleased to add my voice
+              to those praising the DS Standard keyboards. From a technical standpoint, these
+              pianos are a joy to work on. The engineering is extremely accurate in all regards.
+              I am continually impressed with the precision and manufacture of all the components.&rdquo;
+            </blockquote>
+          </AnimatedSection>
 
-          {/* 7. Upright pianos: Hailun */}
-          <section className="py-32">
-            <div className="mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
-              <div>
-                <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-4 inline-block font-[family-name:var(--font-inter)]">
-                  Upright Partnership
-                </span>
-                <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground leading-tight">
-                  Uprights, <span className="italic font-light text-primary">by Hailun.</span>
-                </h2>
-              </div>
-              <p className="max-w-md text-base text-foreground/75 leading-relaxed">
-                Through our partnership with Hailun, the only major acoustic piano
-                manufacturer currently offering DS Standard keyboards, alternatively sized
-                uprights can be placed in practice rooms, conservatories, and homes without
-                the custom retrofit cycle.
+          <AnimatedSection delay={100}>
+            <div className="text-center">
+              <p className="text-background font-semibold">Christopher D. Purdy R.P.T.</p>
+              <p className="text-background/70">
+                Registered Piano Technician, Ohio University School of Music
               </p>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <AnimatedSection delay={100}>
-                <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
-                  <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                  <div className="relative aspect-[2/1] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                    <Image
-                      src="/products_DS6.0R-Hailun-Upright-1024x504.jpg"
-                      alt="DS6.0 Hailun Upright piano"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </figure>
-                <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                  <span>Pl. II. DS6.0 Hailun Upright</span>
-                  <span>HU1P / DS6.0</span>
-                </figcaption>
-              </AnimatedSection>
-
-              <AnimatedSection delay={200}>
-                <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
-                  <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                  <div className="relative aspect-[2/1] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                    <Image
-                      src="/products_DS5.5R-Hailun-Upright-1024x446.jpg"
-                      alt="DS5.5 Hailun Upright piano"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </figure>
-                <figcaption className="mt-4 flex justify-between items-start text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                  <span>Pl. III. DS5.5 Hailun Upright</span>
-                  <span>HU1P / DS5.5</span>
-                </figcaption>
-              </AnimatedSection>
+      {/* Upright Pianos */}
+      <section className="py-32 bg-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+                DS Standard for Upright Pianos
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Through our partnership with Hailun, the only major acoustic piano manufacturer
+                offering DS keyboards
+              </p>
             </div>
+          </AnimatedSection>
 
-            <AnimatedSection delay={300}>
-              <div className="bg-card border border-border p-10 md:p-12 max-w-3xl mx-auto text-center">
-                <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-6 inline-block font-[family-name:var(--font-inter)]">
-                  Stock Offering
-                </span>
-                <h3 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground mb-4">
-                  Hailun HU1P with DS Keyboard
-                </h3>
-                <p className="font-[family-name:var(--font-display)] text-5xl md:text-6xl text-primary mb-3">
-                  US$15,800
-                </p>
-                <p className="text-sm text-foreground/70 mb-10 uppercase tracking-[0.2em] font-[family-name:var(--font-inter)]">
-                  Available in DS5.5 and DS6.0 specifications
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <AnimatedSection delay={100}>
+              <div className="relative aspect-[16/8] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/products_DS6.0R-Hailun-Upright-1024x504.jpg"
+                  alt="DS6.0R Hailun Upright Piano"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center text-muted-foreground mt-4">DS6.0 Hailun Upright</p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <div className="relative aspect-[16/8] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/products_DS5.5R-Hailun-Upright-1024x446.jpg"
+                  alt="DS5.5R Hailun Upright Piano"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-center text-muted-foreground mt-4">DS5.5 Hailun Upright</p>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection delay={300}>
+            <div className="bg-background rounded-3xl p-8 md:p-12 border border-border max-w-3xl mx-auto text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Hailun HU1P with DS Keyboard
+              </h3>
+              <p className="text-4xl font-bold text-primary mb-2">US$15,800</p>
+              <p className="text-muted-foreground mb-6">
+                Available in DS5.5 and DS6.0 sizes
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild className="rounded-full">
                   <a
                     href="http://www.hailun-pianos.com/my-size-keys/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-background border border-foreground bg-foreground hover:bg-primary hover:border-primary transition-colors font-[family-name:var(--font-inter)]"
                   >
-                    USA / Vienna International
+                    USA Customers: Vienna International
                   </a>
-                  <Link
-                    href="/contact_us"
-                    className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
-                  >
+                </Button>
+                <Button asChild variant="outline" className="rounded-full bg-transparent">
+                  <Link href="/contact_us">
                     International Inquiries
                   </Link>
-                </div>
+                </Button>
               </div>
-            </AnimatedSection>
-          </section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-          <hr className="border-t border-border" />
+      {/* Quote */}
+      <section className="py-24 bg-muted">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 text-center text-balance">
+              &ldquo;In 2014, the School of Music at the University of Central Oklahoma was
+              extremely fortunate to acquire a DS6.0 keyboard action fitted to a Steinway D
+              concert grand. Students with smaller hand sizes have since been able to
+              unhesitatingly take on and confidently perform repertoire which would normally
+              have been off limits.&rdquo;
+            </blockquote>
+          </AnimatedSection>
 
-          {/* 8. Pull quote */}
-          <section className="py-24 md:py-32">
-            <AnimatedSection className="max-w-4xl mx-auto px-6 text-center">
-              <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-10 inline-block font-[family-name:var(--font-inter)]">
-                Institutional Impact
-              </span>
-              <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground mb-12">
-                &ldquo;In 2014, the School of Music at the University of Central Oklahoma
-                was extremely fortunate to acquire a DS6.0 keyboard action fitted to a
-                Steinway D concert grand. Students with smaller hand sizes have since been
-                able to unhesitatingly take on and confidently perform repertoire which
-                would normally have been off limits.&rdquo;
+          <AnimatedSection delay={100}>
+            <div className="text-center">
+              <p className="text-foreground font-semibold">Dr. David Forbat</p>
+              <p className="text-muted-foreground">
+                Professor of Piano, University of Central Oklahoma, School of Music
               </p>
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-px bg-primary mb-4" />
-                <cite className="text-[0.7rem] uppercase tracking-[0.25em] font-semibold text-foreground not-italic block font-[family-name:var(--font-inter)]">
-                  Dr. David Forbat
-                </cite>
-                <span className="text-sm italic text-foreground/60 mt-1">
-                  Professor of Piano, University of Central Oklahoma, School of Music
-                </span>
-              </div>
-            </AnimatedSection>
-          </section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-          {/* 9. Correspondence CTA */}
-          <section className="mt-8 pt-24 pb-24 border-t border-border flex flex-col items-center relative">
-            <div className="w-px h-16 bg-border absolute -top-8 left-1/2 -ml-px" />
-            <AnimatedSection className="text-center max-w-2xl flex flex-col items-center px-6">
-              <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary mb-6 font-[family-name:var(--font-inter)]">
-                Correspondence
-              </span>
-              <h3 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl mb-6 text-foreground leading-tight">
-                To commission, to consult,
-                <br />
-                <span className="italic font-light text-primary">or simply to hear one played.</span>
-              </h3>
-              <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-                Institutional orders, private inquiries, and technician consultations all
-                begin the same way. Write or call, and we will walk you through measurement,
-                options, and timing without any pressure.
-              </p>
+      {/* Contact Section */}
+      <section className="py-32 bg-background">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-8 text-balance">
+              Ready to Transform Your Piano?
+            </h2>
+          </AnimatedSection>
 
-              <div className="flex flex-col sm:flex-row items-center gap-6 mb-12 font-[family-name:var(--font-inter)]">
-                <a
-                  href="tel:+18148270296"
-                  className="text-sm uppercase tracking-[0.2em] text-foreground hover:text-primary transition-colors border-b border-border hover:border-primary pb-1"
-                >
-                  +1 814 827 0296
-                </a>
-                <span className="hidden sm:inline text-border">/</span>
-                <a
-                  href="mailto:dskeyboards@tbscc.com"
-                  className="text-sm tracking-[0.1em] text-foreground/80 hover:text-primary transition-colors border-b border-border hover:border-primary pb-1"
-                >
-                  dskeyboards@tbscc.com
-                </a>
-              </div>
+          <AnimatedSection delay={100}>
+            <p className="text-xl text-muted-foreground mb-12 text-balance">
+              Contact us to discuss your needs and learn more about how we can help
+              you achieve your full musical potential.
+            </p>
+          </AnimatedSection>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact_us"
-                  className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-background border border-foreground bg-foreground hover:bg-primary hover:border-primary transition-colors font-[family-name:var(--font-inter)]"
-                >
-                  Contact the Foundation
-                </Link>
-                <Link
-                  href="/donations"
-                  className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
-                >
-                  Support the Mission
-                </Link>
-              </div>
-            </AnimatedSection>
-          </section>
-        </main>
-      </div>
+          <AnimatedSection delay={200}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+              <a
+                href="tel:+18148270296"
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                <span className="font-medium">(814) 827-0296</span>
+              </a>
+              <span className="hidden sm:block text-muted-foreground">|</span>
+              <a
+                href="mailto:dskeyboards@tbscc.com"
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+              >
+                <Mail className="h-5 w-5" />
+                <span className="font-medium">dskeyboards@tbscc.com</span>
+              </a>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={300}>
+            <Button asChild size="lg" className="rounded-full px-8">
+              <Link href="/contact_us">
+                Contact Us
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
 
       <Footer />
     </div>

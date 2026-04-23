@@ -14,6 +14,8 @@ const grandOfferings = [
     badgeVariant: "solid" as const,
     lede:
       "A complete new action with its own stack, built around new hammers and wippens. Interchangeable with the original keyboard in about five minutes.",
+    installationNote:
+      "Initial installation typically takes an afternoon or a day; technicians spend considerably more hours over time to regulate and voice the action to concert level.",
     specs: [
       { label: "Includes", value: "New hammers and wippens on a new action stack" },
       { label: "Swap Time", value: "Approximately five minutes" },
@@ -27,7 +29,7 @@ const grandOfferings = [
     badge: "Studio Favorite",
     badgeVariant: "outline" as const,
     lede:
-      "A new DS Standard frame mounted with the piano's original hammers and wippens. Preserves the instrument's voice and can be reversed at any time by a competent technician.",
+      "A new DS Standard frame mounted with the piano's original hammers and wippens. Preserves the instrument's voice and can be reversed at any time by a competent technician. Because the build is made to measure, we will have your action for approximately three months.",
     specs: [
       { label: "Includes", value: "New frame with original hammers and wippens" },
       { label: "Voice", value: "Preserves the piano's original sound" },
@@ -213,9 +215,14 @@ export default function Products2Page() {
                       <p className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-6">
                         {option.price}
                       </p>
-                      <p className="text-base text-foreground/75 italic leading-relaxed mb-8">
+                      <p className="text-base text-foreground/75 italic leading-relaxed mb-6">
                         {option.lede}
                       </p>
+                      {"installationNote" in option && option.installationNote ? (
+                        <p className="text-sm text-foreground/65 leading-relaxed mb-8 font-[family-name:var(--font-inter)]">
+                          {option.installationNote}
+                        </p>
+                      ) : null}
 
                       <dl className="text-sm font-[family-name:var(--font-inter)] mt-auto">
                         {option.specs.map((spec) => (

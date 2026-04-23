@@ -45,6 +45,7 @@ type BoardMember = {
   role: string
   image: string
   imageClassName?: string
+  splitImage?: boolean
   description: string
   paragraphs?: string[]
   links?: BoardLink[]
@@ -129,6 +130,7 @@ const boardMembers: BoardMember[] = [
     name: "Chase & Peter Steinbuhler",
     role: "Board Members",
     image: "/about_chasepeter.jpg",
+    splitImage: true,
     description:
       "Added in February 2025 to help secure the future of the Foundation's manufacturing operations. They also run a family-owned textile business that has been thriving in Titusville, Pennsylvania since 1897.",
     links: [
@@ -407,14 +409,37 @@ export default function About2Page() {
                     </div>
                     <figure className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
                       <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                      <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className={`object-cover ${member.imageClassName || ""}`}
-                        />
-                      </div>
+                      {member.splitImage ? (
+                        <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)] grid grid-cols-2 gap-1 bg-card">
+                          <div className="relative overflow-hidden">
+                            <Image
+                              src={member.image}
+                              alt={`${member.name} (left)`}
+                              fill
+                              className="object-cover"
+                              style={{ objectPosition: "left center" }}
+                            />
+                          </div>
+                          <div className="relative overflow-hidden">
+                            <Image
+                              src={member.image}
+                              alt={`${member.name} (right)`}
+                              fill
+                              className="object-cover"
+                              style={{ objectPosition: "right center" }}
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="relative aspect-[4/5] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            fill
+                            className={`object-cover ${member.imageClassName || ""}`}
+                          />
+                        </div>
+                      )}
                     </figure>
                     <div className="pt-2 flex flex-col gap-3">
                       <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-foreground leading-tight">

@@ -20,7 +20,20 @@ const navLinks: NavLink[] = [
     label: "About",
     children: [{ href: "/our-story", label: "Our Story" }],
   },
-  { href: "/the_ds_standard", label: "The DS Standard" },
+  {
+    href: "/the_ds_standard",
+    label: "The DS Standard",
+    children: [
+      {
+        href: "/piano-keyboards-of-the-past",
+        label: "Piano Keyboards of the Past",
+      },
+      {
+        href: "/piano-keyboards-of-the-future",
+        label: "Piano Keyboards of the Future",
+      },
+    ],
+  },
   { href: "/projects", label: "Projects" },
   { href: "/products", label: "Products" },
   {

@@ -36,16 +36,6 @@ const navLinks: NavLink[] = [
   },
   { href: "/projects", label: "Projects" },
   { href: "/products", label: "Products" },
-  {
-    label: "Testimonials",
-    children: [
-      { href: "/its-easy-to-adapt", label: "It's Easy to Adapt" },
-      {
-        href: "/the-benefits-of-narrower-keys",
-        label: "The Benefits of Narrower Keys",
-      },
-    ],
-  },
   { href: "/donations", label: "Donations" },
   { href: "/contact_us", label: "Contact Us" },
 ]

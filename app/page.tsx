@@ -352,7 +352,7 @@ export default function Home2Page() {
                   Christopher Donison
                 </cite>
                 <span className="text-sm italic text-foreground/60 mt-1">
-                  Music Director of the Shaw Festival; inventor of the 7/8 keyboard
+                  Music Director of the Shaw Festival; Co-founder of the DS Standard.
                 </span>
                 <span className="mt-6 text-[0.7rem] italic tracking-[0.08em] text-foreground/55 font-[family-name:var(--font-inter)] max-w-xl leading-relaxed">
                   &lsquo;Small Hands? Try This Keyboard, You&rsquo;ll Like It&rsquo;, Piano &amp; Keyboard Magazine, July/August 1998, pp. 41 to 43.

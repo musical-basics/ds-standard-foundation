@@ -238,7 +238,7 @@ export default function BenefitsOfNarrowerKeysPage() {
               Christopher Donison
             </cite>
             <span className="text-sm italic text-foreground/60 mt-1">
-              Music Director of the Shaw Festival; inventor of the 7/8 keyboard
+              Music Director of the Shaw Festival; Co-founder of the DS Standard.
             </span>
           </div>
         </AnimatedSection>

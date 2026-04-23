@@ -339,12 +339,45 @@ export default function DSStandard2Page() {
                 </p>
               </AnimatedSection>
 
+              <AnimatedSection delay={350}>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  The environment we provided was one of relaxed comfort. There were rooms
+                  where pianists could spend the night, so that in an uninterrupted
+                  afternoon, or across an entire weekend, they could work with keyboards of
+                  every size. A Steinway B was fitted with the complete range of keyboard
+                  sizes; alongside it, other pianos stood ready with conventional as well as
+                  smaller keyboards, giving pianists the freedom to experiment by moving
+                  from one instrument to another. When they wished, we would change the
+                  keyboard in the Steinway B to one slightly smaller or slightly larger, so
+                  the comparison could continue at the same piano.
+                </p>
+              </AnimatedSection>
+
               <AnimatedSection delay={400}>
                 <p className="text-lg text-foreground/80 leading-relaxed">
                   The patterns in that room eventually became the registry you see on this
                   page. The dimensions are not guesses; they are what real pianists, working
                   without anyone looking over their shoulder, kept reaching for.
                 </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={450}>
+                <p className="font-[family-name:var(--font-display)] italic text-xl md:text-2xl text-primary/90 leading-snug border-l-2 border-primary/40 pl-5 mt-4">
+                  Our primary objective was to determine how many additional standards we
+                  should recommend and what sizes they should be.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={500}>
+                <div className="mt-8">
+                  <Link
+                    href="/our-story"
+                    className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-1"
+                  >
+                    Read the full story
+                    <span aria-hidden>&rarr;</span>
+                  </Link>
+                </div>
               </AnimatedSection>
             </StickySection>
           </section>
@@ -388,31 +421,159 @@ export default function DSStandard2Page() {
 
               <AnimatedSection delay={200}>
                 <p className="text-lg text-foreground/80 leading-relaxed mt-6">
-                  The average modern conventional keyboard measures just over 48 inches.
-                  The first keyboards we built were 42 inches wide. By 1998 we had also made
-                  keyboards at 39 inches and at 45 inches, so that we could watch pianists
-                  slide between them.
+                  The average modern conventional keyboard measures just over 48&quot;.
+                  The first keyboards we built were 42&quot; in width. By 1998 we also had
+                  keyboards that measured 39&quot; and 45&quot;, so that we could watch
+                  pianists slide between them.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection delay={300}>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  We learned very quickly that one alternative was not enough. Many
-                  pianists felt a genuine relief on the 42 inch keyboard and immediately
-                  wanted to try something even smaller. Others welcomed the relief but
-                  found 42 inches too small for their own hand. No single reduction solved
-                  the problem.
+                  With these three additional sizes to work with, we learned very quickly
+                  that there was strong interest in more than one additional size. The great
+                  relief pianists felt on the 42&quot; keyboard was almost always
+                  accompanied by a desire to go smaller still. Others welcomed the relief
+                  but found 42&quot; too small for their own hand. No single reduction
+                  solved the problem.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection delay={400}>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  It became clear that the adult population needed at least two certified
-                  sizes beyond the conventional keyboard. That realisation is what turned
-                  a set of prototypes into a standard.
+                  It became clear that we needed at least two more keyboard sizes in
+                  addition to the conventional keyboard to satisfy the range of adult
+                  hands. That realisation is what turned a set of prototypes into a
+                  standard.
                 </p>
               </AnimatedSection>
+
+              <AnimatedSection delay={500}>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  To determine the exact sizes, the next step was a thorough study at the
+                  small end of the range. For this, we built five keyboards, measuring 38,
+                  39, 40, 41 and 42 inches. Once a practical small size was established,
+                  we could then add an appropriate in-between size.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={550}>
+                <div className="mt-6 pl-4 border-l border-border">
+                  <div className="flex flex-wrap gap-3 font-[family-name:var(--font-inter)]">
+                    {["38\"", "39\"", "40\"", "41\"", "42\""].map((label) => (
+                      <span
+                        key={label}
+                        className="text-[0.7rem] uppercase tracking-[0.2em] text-foreground/70 border border-border px-3 py-1"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-foreground/50 font-[family-name:var(--font-inter)] mt-3">
+                    Five keyboards, the small-end study
+                  </p>
+                </div>
+              </AnimatedSection>
             </StickySection>
+          </section>
+
+          <hr className="border-t border-border" />
+
+          {/* 7b. The Results */}
+          <section id="results" className="py-24 scroll-mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 mb-16">
+              <div className="md:col-span-4 lg:col-span-3">
+                <h2 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary sticky top-28 font-[family-name:var(--font-inter)]">
+                  The Results
+                </h2>
+              </div>
+              <AnimatedSection className="md:col-span-8 lg:col-span-8">
+                <h3 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground leading-tight">
+                  When does a keyboard become
+                  <span className="italic text-primary"> too small?</span>
+                </h3>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+              <div className="md:col-span-4 lg:col-span-3" />
+              <div className="md:col-span-8 lg:col-span-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+                <AnimatedSection>
+                  <p>
+                    One pianist told me she wanted to &ldquo;walk 10ths like Oscar
+                    Peterson,&rdquo; and had calculated that she would need a 38&quot;
+                    keyboard to do it. She flew across the country to try our smallest
+                    keyboards, only to discover that they were too cramped for her own
+                    hand.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={100}>
+                  <p>
+                    There was always a secondary consideration: the width of the sharps,
+                    and the tradeoff between the landing area on the sharp&rsquo;s top and
+                    the space between them. After a great deal of experimentation, we found
+                    it prudent to stay close to the natural-to-sharp ratio found on
+                    conventional keyboards.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={150}>
+                  <p>
+                    Measuring dozens of hands, comparing them against the full range of
+                    hand sizes found in mature pianists, listening to feedback, and
+                    watching which sizes were actually purchased: all of it pointed to one
+                    conclusion. For pianists whose hand spans were in the 7&quot; to
+                    8&quot; range, there was a real desire to go below 42&quot; (everyone
+                    wants to play 10ths comfortably). But once we dropped below a
+                    40&quot; keyboard, the space between the sharps became too confined
+                    for all but the smallest hands with the thinnest fingers. The
+                    41&quot; keyboard turned out to be the best overall choice, even though
+                    10ths remained out of reach for the very smallest hands.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={200}>
+                  <div className="bg-card border border-border p-8 my-4">
+                    <p className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)] mb-3">
+                      The conventional octave, specified
+                    </p>
+                    <p className="font-[family-name:var(--font-display)] italic text-2xl md:text-3xl text-foreground leading-snug">
+                      6.50&quot; <span className="text-foreground/50">octave,</span> with a
+                      tolerance of &plusmn;.04&quot;.
+                    </p>
+                    <p className="text-sm text-foreground/70 leading-relaxed mt-4">
+                      Every piano keyboard in use today hovers around a 6.5 inch octave,
+                      and the octave size of all conventional pianos stays within a
+                      .04 inch range of that number. We therefore set the standard for the
+                      conventional keyboard octave at 6.50 inches, with a tolerance of
+                      &plusmn;.04 inches.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={250}>
+                  <p>
+                    To find the appropriate middle keyboard, it was clear the ratio between
+                    the conventional keyboard and the middle size needed to match the ratio
+                    between the middle size and the keyboard at the small end of the range.
+                    The ratio 48/52 gave us very attractive properties. Most importantly,
+                    it produced a keyboard whose overall width was slightly larger than
+                    41 inches, which is why it became the governing ratio between every
+                    certified size in the registry.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={300}>
+                  <p>
+                    In addition to the three keyboards for adult pianists, we have
+                    recently added smaller sizes for children. Experimenting with those,
+                    we are now building a DS4.0 keyboard for the Steinway B; initial
+                    tests are showing that it will be possible.
+                  </p>
+                </AnimatedSection>
+              </div>
+            </div>
           </section>
 
           {/* 8. The 48/52 ratio on dark */}
@@ -446,6 +607,32 @@ export default function DSStandard2Page() {
                   hand-to-keyboard relationship repeats consistently from the conventional
                   keyboard all the way down to the smallest child size.
                 </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={400}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto text-left">
+                  <div className="border-t border-background/20 pt-6">
+                    <p className="text-[0.65rem] uppercase tracking-[0.25em] text-background/50 font-[family-name:var(--font-inter)] mb-3">
+                      How the octave is measured
+                    </p>
+                    <p className="text-base text-background/80 leading-relaxed">
+                      A very accurate octave measurement is obtained by taking the
+                      distance from the left side of the piano&rsquo;s first C key to the
+                      left side of the eighth C key, then dividing that number by 7.
+                    </p>
+                  </div>
+                  <div className="border-t border-background/20 pt-6">
+                    <p className="text-[0.65rem] uppercase tracking-[0.25em] text-background/50 font-[family-name:var(--font-inter)] mb-3">
+                      Should a larger keyboard ever be needed
+                    </p>
+                    <p className="text-base text-background/80 leading-relaxed">
+                      The ratio provides an elegant fit: reduce the number of natural keys
+                      from 52 to 48, losing three notes at each end of the piano, and the
+                      next larger size fills the available space without altering the
+                      instrument.
+                    </p>
+                  </div>
+                </div>
               </AnimatedSection>
             </div>
           </section>
@@ -508,6 +695,150 @@ export default function DSStandard2Page() {
                   One ratio (approximately 0.923) connects every certified size in the
                   registry, from the conventional 6.5 inch keyboard down to the smallest
                   4.0 inch child size.
+                </p>
+              </AnimatedSection>
+            </div>
+          </section>
+
+          <hr className="border-t border-border" />
+
+          {/* 9b. Discussion */}
+          <section id="discussion" className="py-24 scroll-mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+              <div className="md:col-span-4 lg:col-span-3">
+                <h2 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary sticky top-28 font-[family-name:var(--font-inter)]">
+                  Discussion
+                </h2>
+              </div>
+
+              <div className="md:col-span-8 lg:col-span-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+                <AnimatedSection>
+                  <h3 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight mb-4">
+                    Once a pianist is in their
+                    <span className="italic text-primary"> zone</span>,
+                    small changes in size hardly matter.
+                  </h3>
+                </AnimatedSection>
+
+                <AnimatedSection delay={100}>
+                  <p>
+                    It was interesting to observe that small changes in keyboard size did
+                    not make much difference to pianists once they had reached a size that
+                    was &ldquo;in their zone.&rdquo; When we built a keyboard with a 6.24
+                    inch octave, a male pianist with an average hand noticed little
+                    difference, while a small-handed pianist noticed immediate relief. The
+                    exact sizes for the standards turned out not to be that critical.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={150}>
+                  <p>
+                    Starting with Dr. Carol Leone&rsquo;s research at Southern Methodist
+                    University in the year 2000, ongoing university studies have never
+                    demonstrated a need for other sizes. Rhonda Boyle in Melbourne has
+                    compiled and analysed a great deal of data on hands and piano playing
+                    that agrees with our findings, the main point being a roughly 1 inch
+                    average difference between male and female hands.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={200}>
+                  <p>
+                    Although we offered a keyboard larger than the conventional size, no
+                    pianist ever asked to try it. Given that the large conventional size
+                    already exists, we feel confident that the registry offers nearly
+                    optimum sizes for every adult pianist. The keyboards are best
+                    understood as overlapping zones that allow for differences in finger
+                    thickness and personal preference.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection delay={250}>
+                  <div className="mt-6 flex flex-wrap gap-5">
+                    <a
+                      href="https://www.paskpiano.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-1"
+                    >
+                      Rhonda Boyle&rsquo;s PASK evidence
+                      <span aria-hidden>&rarr;</span>
+                    </a>
+                    <Link
+                      href="/the-benefits-of-narrower-keys"
+                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-1"
+                    >
+                      Read Donison&rsquo;s full testimonial
+                      <span aria-hidden>&rarr;</span>
+                    </Link>
+                    <Link
+                      href="/its-easy-to-adapt"
+                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-1"
+                    >
+                      Read Linda Gould&rsquo;s full testimonial
+                      <span aria-hidden>&rarr;</span>
+                    </Link>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+          </section>
+
+          <hr className="border-t border-border" />
+
+          {/* 9c. DS Logo tolerance */}
+          <section id="ds-logo" className="py-24 scroll-mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 items-start">
+              <div className="md:col-span-4 lg:col-span-3">
+                <AnimatedSection>
+                  <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
+                    The DS Logo
+                  </span>
+                  <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground leading-tight mt-4">
+                    The mark
+                    <span className="italic text-primary"> of certification</span>.
+                  </h2>
+                </AnimatedSection>
+              </div>
+
+              <AnimatedSection delay={150} className="md:col-span-8 lg:col-span-8">
+                <div className="border border-border bg-card">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border">
+                    <div className="p-6">
+                      <p className="font-[family-name:var(--font-display)] text-2xl text-foreground">
+                        DS6.5
+                        <sup className="text-xs">&reg;</sup>
+                      </p>
+                      <p className="text-[0.65rem] uppercase tracking-[0.2em] text-primary font-[family-name:var(--font-inter)] mt-2">
+                        Conventional
+                      </p>
+                    </div>
+                    <div className="p-6">
+                      <p className="font-[family-name:var(--font-display)] text-2xl text-foreground">
+                        DS6.0
+                        <sup className="text-xs">&reg;</sup>
+                      </p>
+                      <p className="text-[0.65rem] uppercase tracking-[0.2em] text-primary font-[family-name:var(--font-inter)] mt-2">
+                        Universal
+                      </p>
+                    </div>
+                    <div className="p-6">
+                      <p className="font-[family-name:var(--font-display)] text-2xl text-foreground">
+                        DS5.5
+                        <sup className="text-xs">&reg;</sup>
+                      </p>
+                      <p className="text-[0.65rem] uppercase tracking-[0.2em] text-primary font-[family-name:var(--font-inter)] mt-2">
+                        7/8 Keyboard
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-8 font-[family-name:var(--font-display)] italic text-xl md:text-2xl text-foreground/90 leading-snug border-l-2 border-primary/40 pl-5">
+                  Any piano certified by the DS logo, whether as a result of its original
+                  manufacturing, retrofitting, or a rebuild, is guaranteed to conform to
+                  one of the corresponding DS Standard sizes within a tolerance of
+                  &plusmn;.04 inches.
                 </p>
               </AnimatedSection>
             </div>
@@ -662,12 +993,22 @@ export default function DSStandard2Page() {
               >
                 &ldquo;
               </span>
-              <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground mb-12 relative z-10">
-                Our Music and Medicine department has conducted ground breaking research on
-                the relationship of hand pain in small-handed pianists to the use of the
-                standard size keyboard. And simultaneously, hard evidence that for smaller
-                hands, the smaller piano keyboard dramatically REDUCES this pain.
-              </p>
+              <div className="space-y-8 mb-12 relative z-10">
+                <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl lg:text-5xl leading-snug italic text-foreground">
+                  Our Music and Medicine department has conducted ground breaking research on
+                  the relationship of hand pain in small-handed pianists to the use of the
+                  standard size keyboard. And simultaneously, hard evidence that for smaller
+                  hands, the smaller piano keyboard dramatically REDUCES this pain.
+                </p>
+                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl leading-snug italic text-foreground/90">
+                  It is incomprehensible to me that the major piano manufacturers have not
+                  seen the economic advantage to them of producing these smaller keyboards.
+                </p>
+                <p className="font-[family-name:var(--font-display)] text-2xl md:text-3xl leading-snug italic text-foreground/90">
+                  We pianists and teachers can certainly see the pedagogical advantages of
+                  training a young musician on an instrument that fits their body.
+                </p>
+              </div>
               <div className="flex flex-col items-center">
                 <div className="w-12 h-px bg-primary mb-4" />
                 <cite className="text-[0.7rem] uppercase tracking-[0.25em] font-semibold text-foreground not-italic block font-[family-name:var(--font-inter)]">

@@ -52,7 +52,7 @@ export function Navbar2() {
               alt="DS Standard Foundation"
               width={40}
               height={40}
-              className="h-8 w-auto"
+              className="h-8 w-auto classic:invert"
             />
           </Link>
 

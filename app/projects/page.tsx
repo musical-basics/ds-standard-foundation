@@ -152,26 +152,92 @@ export default function Projects2Page() {
                 </h2>
               </AnimatedSection>
             </div>
-            <AnimatedSection className="md:col-span-8 lg:col-span-8 space-y-6">
-              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                In 1996 Linda Gould was the first to purchase a DS Keyboard. Her
-                video &ldquo;My Piano Has a Secret&rdquo; powerfully describes the
-                crying need for alternative keyboards to be adopted in the world of
-                the piano.
-              </p>
-              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas
-                was the first to study the practicality of using alternative size
-                keyboards in a university setting.
-              </p>
-              <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                Universities such as Texas Tech University and the University of
-                Nebraska-Lincoln have collectively purchased many DS Keyboards, but
-                today there no longer is a piano faculty member, the
-                university&rsquo;s &ldquo;champion,&rdquo; to study them. Lionel
-                Yu&rsquo;s video &ldquo;Piano&rsquo;s Darkest Secret&rdquo;
-                describes some of the problems confronting adoption.
-              </p>
+            <AnimatedSection className="md:col-span-8 lg:col-span-8 space-y-12">
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  In 1996 Linda Gould was the first to purchase a DS Keyboard. Her
+                  video &ldquo;My Piano Has a Secret&rdquo; powerfully describes the
+                  crying need for alternative keyboards to be adopted in the world of
+                  the piano.
+                </p>
+                <div id="video-linda-gould" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/Jn9-c8n0Q3s"
+                        title="My Piano Has A Secret"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Linda Gould · My Piano Has a Secret
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas
+                  was the first to study the practicality of using alternative size
+                  keyboards in a university setting.
+                </p>
+                <div id="video-carol-leone" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/wyoHP3B0mQU"
+                        title="Increasing Piano Performance Potential with Narrower Keys"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Carol Leone · Increasing Piano Performance Potential with Narrower Keys
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  Universities such as Texas Tech University and the University of
+                  Nebraska-Lincoln have collectively purchased many DS Keyboards, but
+                  today there no longer is a piano faculty member, the
+                  university&rsquo;s &ldquo;champion,&rdquo; to study them. Lionel
+                  Yu&rsquo;s video &ldquo;Piano&rsquo;s Darkest Secret&rdquo;
+                  describes some of the problems confronting adoption.
+                </p>
+                <div id="video-pianos-darkest-secret" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/ZXlknI-Jc48"
+                        title="Piano's Darkest Secret"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Lionel Yu · Piano&rsquo;s Darkest Secret
+                  </figcaption>
+                </div>
+              </div>
+
               <div className="pt-6 flex flex-wrap gap-x-8 gap-y-3 border-t border-border">
                 <a
                   href="https://www.paskpiano.org/performances-and-conferences/"
@@ -268,15 +334,20 @@ export default function Projects2Page() {
               {/* Case 02: Arazi */}
               <AnimatedSection delay={100}>
                 <article className="bg-background hover:bg-card transition-colors p-8 lg:p-10 h-full flex flex-col">
-                  <figure className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+                  <figure id="video-anna-arazi" className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)] scroll-mt-32">
                     <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-[4/3] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
-                      <Image
-                        src="/projects_Anna-Arazi-682x1024.jpg"
-                        alt="Anna Arazi at the Dallas International Piano Competition"
-                        fill
-                        className="object-cover"
-                      />
+                    <div className="relative aspect-[4/3] overflow-hidden bg-black">
+                      <video
+                        controls
+                        preload="metadata"
+                        poster="/projects_Anna-Arazi-682x1024.jpg"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      >
+                        <source
+                          src="https://dsstandardfoundation.org/wp-content/uploads/2020/03/Anna%20Arazi%20Finals%20DIPC.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
                     </div>
                   </figure>
                   <div className="pt-6">

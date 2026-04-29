@@ -15,13 +15,13 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
+  { href: "/the_ds_standard", label: "The DS Standard" },
   {
     href: "/about",
     label: "About",
     children: [{ href: "/our-story", label: "Our Story" }],
   },
   { href: "/history", label: "History" },
-  { href: "/the_ds_standard", label: "The DS Standard" },
   { href: "/projects", label: "Projects" },
   { href: "/products", label: "Products" },
   { href: "/donations", label: "Donations" },

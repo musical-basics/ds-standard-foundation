@@ -11,8 +11,8 @@ type NavLink = { href: string; label: string }
 // V2 navbar: links only to /foo2 routes so the v2 experience stays self-contained.
 const navLinks: NavLink[] = [
   { href: "/home2", label: "Home" },
-  { href: "/about2", label: "About" },
   { href: "/the_ds_standard2", label: "The DS Standard" },
+  { href: "/about2", label: "About" },
   { href: "/projects2", label: "Projects" },
   { href: "/products2", label: "Products" },
   { href: "/donations2", label: "Donations" },

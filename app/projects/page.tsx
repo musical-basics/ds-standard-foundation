@@ -140,129 +140,6 @@ export default function Projects2Page() {
 
       <div className="px-4 md:px-12 lg:px-24">
         <main className="w-full max-w-[1400px] mx-auto">
-          {/* 1b. A Short History */}
-          <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
-            <div className="md:col-span-4 lg:col-span-3">
-              <AnimatedSection>
-                <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)] block">
-                  Archival Note
-                </span>
-                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight mt-4 sticky top-28">
-                  A Short <span className="italic text-primary">History</span>.
-                </h2>
-              </AnimatedSection>
-            </div>
-            <AnimatedSection className="md:col-span-8 lg:col-span-8 space-y-12">
-              <div className="space-y-6">
-                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                  In 1996 Linda Gould was the first to purchase a DS Keyboard. Her
-                  video &ldquo;My Piano Has a Secret&rdquo; powerfully describes the
-                  crying need for alternative keyboards to be adopted in the world of
-                  the piano.
-                </p>
-                <div id="video-linda-gould" className="scroll-mt-32">
-                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
-                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-video overflow-hidden">
-                      <iframe
-                        src="https://www.youtube-nocookie.com/embed/Jn9-c8n0Q3s"
-                        title="My Piano Has A Secret"
-                        loading="lazy"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
-                      />
-                    </div>
-                  </figure>
-                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                    Linda Gould · My Piano Has a Secret
-                  </figcaption>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                  In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas
-                  was the first to study the practicality of using alternative size
-                  keyboards in a university setting.
-                </p>
-                <div id="video-carol-leone" className="scroll-mt-32">
-                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
-                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-video overflow-hidden">
-                      <iframe
-                        src="https://www.youtube-nocookie.com/embed/wyoHP3B0mQU"
-                        title="Increasing Piano Performance Potential with Narrower Keys"
-                        loading="lazy"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
-                      />
-                    </div>
-                  </figure>
-                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                    Carol Leone · Increasing Piano Performance Potential with Narrower Keys
-                  </figcaption>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
-                  Universities such as Texas Tech University and the University of
-                  Nebraska-Lincoln have collectively purchased many DS Keyboards, but
-                  today there no longer is a piano faculty member, the
-                  university&rsquo;s &ldquo;champion,&rdquo; to study them. Lionel
-                  Yu&rsquo;s video &ldquo;Piano&rsquo;s Darkest Secret&rdquo;
-                  describes some of the problems confronting adoption.
-                </p>
-                <div id="video-pianos-darkest-secret" className="scroll-mt-32">
-                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
-                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-video overflow-hidden">
-                      <iframe
-                        src="https://www.youtube-nocookie.com/embed/ZXlknI-Jc48"
-                        title="Piano's Darkest Secret"
-                        loading="lazy"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
-                      />
-                    </div>
-                  </figure>
-                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-                    Lionel Yu · Piano&rsquo;s Darkest Secret
-                  </figcaption>
-                </div>
-              </div>
-
-              <div className="pt-6 flex flex-wrap gap-x-8 gap-y-3 border-t border-border">
-                <a
-                  href="https://www.paskpiano.org/performances-and-conferences/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
-                >
-                  <span className="inline-block w-6 h-px bg-primary" />
-                  PASK performances and conferences
-                </a>
-                <a
-                  href="https://www.paskpiano.org/universities-schools/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
-                >
-                  <span className="inline-block w-6 h-px bg-primary" />
-                  PASK universities and schools
-                </a>
-              </div>
-            </AnimatedSection>
-          </section>
-
-          <hr className="border-t border-border" />
-
           {/* 2. Prospectus */}
           <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
             <div className="md:col-span-4 lg:col-span-3">
@@ -640,6 +517,129 @@ export default function Projects2Page() {
               </div>
             </AnimatedSection>
           </section>
+
+          {/* A Short History (moved below the Jessica Johnson pull quote) */}
+          <section className="py-24 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+            <div className="md:col-span-4 lg:col-span-3">
+              <AnimatedSection>
+                <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)] block">
+                  Archival Note
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight mt-4 sticky top-28">
+                  A Short <span className="italic text-primary">History</span>.
+                </h2>
+              </AnimatedSection>
+            </div>
+            <AnimatedSection className="md:col-span-8 lg:col-span-8 space-y-12">
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  In 1996 Linda Gould was the first to purchase a DS Keyboard. Her
+                  video &ldquo;My Piano Has a Secret&rdquo; powerfully describes the
+                  crying need for alternative keyboards to be adopted in the world of
+                  the piano.
+                </p>
+                <div id="video-linda-gould" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/Jn9-c8n0Q3s"
+                        title="My Piano Has A Secret"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Linda Gould · My Piano Has a Secret
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  In 2000 Dr. Carol Leone at SMU Meadows School of the Arts in Dallas
+                  was the first to study the practicality of using alternative size
+                  keyboards in a university setting.
+                </p>
+                <div id="video-carol-leone" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/wyoHP3B0mQU"
+                        title="Increasing Piano Performance Potential with Narrower Keys"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Carol Leone · Increasing Piano Performance Potential with Narrower Keys
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg lg:text-xl leading-[1.65] text-foreground/85">
+                  Universities such as Texas Tech University and the University of
+                  Nebraska-Lincoln have collectively purchased many DS Keyboards, but
+                  today there no longer is a piano faculty member, the
+                  university&rsquo;s &ldquo;champion,&rdquo; to study them. Lionel
+                  Yu&rsquo;s video &ldquo;Piano&rsquo;s Darkest Secret&rdquo;
+                  describes some of the problems confronting adoption.
+                </p>
+                <div id="video-pianos-darkest-secret" className="scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/ZXlknI-Jc48"
+                        title="Piano's Darkest Secret"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Lionel Yu · Piano&rsquo;s Darkest Secret
+                  </figcaption>
+                </div>
+              </div>
+
+              <div className="pt-6 flex flex-wrap gap-x-8 gap-y-3 border-t border-border">
+                <a
+                  href="https://www.paskpiano.org/performances-and-conferences/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
+                >
+                  <span className="inline-block w-6 h-px bg-primary" />
+                  PASK performances and conferences
+                </a>
+                <a
+                  href="https://www.paskpiano.org/universities-schools/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] inline-flex items-center gap-2"
+                >
+                  <span className="inline-block w-6 h-px bg-primary" />
+                  PASK universities and schools
+                </a>
+              </div>
+            </AnimatedSection>
+          </section>
+
+          <hr className="border-t border-border" />
 
           {/* 7. Competitions & showcases */}
           <section className="py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">

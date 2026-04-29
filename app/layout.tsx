@@ -37,13 +37,19 @@ export const metadata: Metadata = {
   },
 }
 
+// Inlined into <head> so it runs before first paint and avoids a theme flash.
+const themeBootstrap = `(function(){try{var m=document.cookie.match(/(?:^|;\\s*)dssf-theme=([^;]+)/);var t=m?decodeURIComponent(m[1]):'prestige';if(t!=='classic'&&t!=='prestige')t='prestige';var r=document.documentElement;r.classList.remove('theme-prestige','theme-classic');r.classList.add('theme-'+t);}catch(e){}})();`
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${ebGaramond.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${ebGaramond.variable} ${inter.variable} theme-prestige`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />

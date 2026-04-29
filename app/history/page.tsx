@@ -131,9 +131,29 @@ export default function HistoryPage() {
                 <p className="text-2xl lg:text-[1.75rem] leading-[1.55] text-foreground [&::first-letter]:float-left [&::first-letter]:font-[family-name:var(--font-display)] [&::first-letter]:text-[5.5rem] [&::first-letter]:leading-[0.8] [&::first-letter]:pr-3 [&::first-letter]:pt-1 [&::first-letter]:text-primary">
                   He was not only a highly acclaimed pianist, respected by the likes of
                   Rachmaninov, but also a keen inventor. He had powerful but small hands
-                  and in this video he is playing the smaller keyboard with which he
+                  and in the video below he is playing the smaller keyboard with which he
                   concertized in the 1930s and 1940s.
                 </p>
+
+                <div id="hofmann-video" className="mt-10 scroll-mt-32">
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-video overflow-hidden">
+                      <iframe
+                        src="https://www.youtube-nocookie.com/embed/xlS3TGhAQ6A"
+                        title="Josef Hofmann film footage"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Josef Hofmann · The complete film footage
+                  </figcaption>
+                </div>
               </AnimatedSection>
             </section>
 
@@ -184,9 +204,16 @@ export default function HistoryPage() {
               </div>
               <AnimatedSection className="md:col-span-8 lg:col-span-8">
                 <p className="text-2xl lg:text-[1.75rem] leading-[1.55] text-foreground">
-                  In the overhead views of this video the bass filler block, which takes
-                  up the extra space in the piano, can be seen. The size of the
-                  keyboard&rsquo;s octave is 6.25 inches.
+                  In the overhead views of{" "}
+                  <Link
+                    href="#hofmann-video"
+                    className="text-primary underline-offset-4 hover:underline"
+                  >
+                    the Hofmann film footage
+                  </Link>{" "}
+                  the bass filler block, which takes up the extra space in the
+                  piano, can be seen. The size of the keyboard&rsquo;s octave is
+                  6.25 inches.
                 </p>
                 <div className="mt-10">
                   <Link

@@ -334,20 +334,15 @@ export default function Projects2Page() {
               {/* Case 02: Arazi */}
               <AnimatedSection delay={100}>
                 <article className="bg-background hover:bg-card transition-colors p-8 lg:p-10 h-full flex flex-col">
-                  <figure id="video-anna-arazi" className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)] scroll-mt-32">
+                  <figure className="relative bg-card p-3 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
                     <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-                    <div className="relative aspect-[4/3] overflow-hidden bg-black">
-                      <video
-                        controls
-                        preload="metadata"
-                        poster="/projects_Anna-Arazi-682x1024.jpg"
-                        className="absolute inset-0 w-full h-full object-cover"
-                      >
-                        <source
-                          src="https://dsstandardfoundation.org/wp-content/uploads/2020/03/Anna%20Arazi%20Finals%20DIPC.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
+                    <div className="relative aspect-[4/3] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+                      <Image
+                        src="/projects_Anna-Arazi-682x1024.jpg"
+                        alt="Anna Arazi at the Dallas International Piano Competition"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </figure>
                   <div className="pt-6">

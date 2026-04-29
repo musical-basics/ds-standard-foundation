@@ -106,7 +106,24 @@ export default function HistoryPage() {
             {/* Josef Hofmann */}
             <section className="py-8 md:py-12 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
               <div className="md:col-span-4 lg:col-span-3">
-                <h3 className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary sticky top-28 font-[family-name:var(--font-inter)]">
+                <AnimatedSection>
+                  <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                    <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                    <div className="relative aspect-[2/3] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+                      <Image
+                        src="/history_josef_hofmann.jpg"
+                        alt="Josef Hofmann, portrait by the Bain News Service"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 25vw"
+                      />
+                    </div>
+                  </figure>
+                  <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                    Bain News Service · Library of Congress
+                  </figcaption>
+                </AnimatedSection>
+                <h3 className="mt-8 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary sticky top-28 font-[family-name:var(--font-inter)]">
                   Josef Hofmann
                 </h3>
               </div>

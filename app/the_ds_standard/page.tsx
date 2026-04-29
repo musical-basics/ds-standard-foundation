@@ -131,10 +131,10 @@ export default function DSStandard2Page() {
           <AnimatedSection>
             <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
               <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
-              <div className="relative aspect-[3/1] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
+              <div className="relative aspect-[5/3] overflow-hidden [filter:grayscale(80%)_sepia(15%)_contrast(1.05)]">
                 <Image
-                  src="/home_Poster-3-Keyboards-Wide4-1024x307.jpg"
-                  alt="The three DS Standard keyboard specifications for adult hands, shown at scale"
+                  src="/about_DS-Standard-Keyboards-X.jpg"
+                  alt="The four DS Standard keyboard specifications, stacked at scale on a four-tier rack"
                   fill
                   className="object-cover"
                   priority
@@ -142,7 +142,7 @@ export default function DSStandard2Page() {
               </div>
             </figure>
             <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
-              Pl. I. DS6.5, DS6.0, DS5.5 at scale
+              Pl. I. DS6.5, DS6.0, DS5.5, DS5.1 at scale
             </figcaption>
           </AnimatedSection>
         </div>

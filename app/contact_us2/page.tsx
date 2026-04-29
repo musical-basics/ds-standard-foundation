@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar2 } from "@/components/navbar2"
+import { Footer2 } from "@/components/footer2"
 import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 import { Mail, Facebook, Youtube, ArrowRight } from "lucide-react"
@@ -42,7 +42,7 @@ const directors = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar2 />
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -244,7 +244,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimatedSection delay={100}>
               <Link
-                href="/the_ds_standard"
+                href="/the_ds_standard2"
                 className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
               >
                 <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -258,7 +258,7 @@ export default function ContactPage() {
 
             <AnimatedSection delay={200}>
               <Link
-                href="/products"
+                href="/products2"
                 className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
               >
                 <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -272,7 +272,7 @@ export default function ContactPage() {
 
             <AnimatedSection delay={300}>
               <Link
-                href="/projects"
+                href="/projects2"
                 className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
               >
                 <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -286,7 +286,7 @@ export default function ContactPage() {
 
             <AnimatedSection delay={400}>
               <Link
-                href="/donations"
+                href="/donations2"
                 className="block p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all group text-center"
               >
                 <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -331,14 +331,14 @@ export default function ContactPage() {
                 size="lg"
                 className="rounded-full px-8 border-background/30 text-background hover:bg-background/10 bg-transparent"
               >
-                <Link href="/about">Learn About Us</Link>
+                <Link href="/about2">Learn About Us</Link>
               </Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <Footer />
+      <Footer2 />
     </div>
   )
 }

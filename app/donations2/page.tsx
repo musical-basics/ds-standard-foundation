@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar2 } from "@/components/navbar2"
+import { Footer2 } from "@/components/footer2"
 import { AnimatedSection } from "@/components/animated-section"
 import { StickySection } from "@/components/sticky-section"
 import { Button } from "@/components/ui/button"
@@ -58,7 +58,7 @@ const fundsUsage = [
 export default function DonationsPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar2 />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -393,14 +393,14 @@ export default function DonationsPage() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-transparent">
-                <Link href="/contact_us">Contact for Other Options</Link>
+                <Link href="/contact_us2">Contact for Other Options</Link>
               </Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <Footer />
+      <Footer2 />
     </div>
   )
 }

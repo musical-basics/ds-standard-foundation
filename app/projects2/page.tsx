@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar2 } from "@/components/navbar2"
+import { Footer2 } from "@/components/footer2"
 import { AnimatedSection } from "@/components/animated-section"
 import { StickySection } from "@/components/sticky-section"
 import { Button } from "@/components/ui/button"
@@ -42,7 +42,7 @@ const researchUniversities = [
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar2 />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
               </ul>
               <div>
                 <Button asChild size="lg" className="rounded-full px-8">
-                  <Link href="/contact_us">
+                  <Link href="/contact_us2">
                     Apply for a Loan <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -425,20 +425,20 @@ export default function ProjectsPage() {
           <AnimatedSection delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="rounded-full px-8">
-                <Link href="/contact_us">
+                <Link href="/contact_us2">
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-transparent">
-                <Link href="/donations">Support Our Projects</Link>
+                <Link href="/donations2">Support Our Projects</Link>
               </Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <Footer />
+      <Footer2 />
     </div>
   )
 }

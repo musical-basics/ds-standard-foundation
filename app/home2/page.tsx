@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar2 } from "@/components/navbar2"
+import { Footer2 } from "@/components/footer2"
 import { AnimatedSection } from "@/components/animated-section"
 import { StickySection } from "@/components/sticky-section"
 import { Button } from "@/components/ui/button"
@@ -12,7 +12,7 @@ import { ArrowRight, Music, Hand, Zap, Heart } from "lucide-react"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar2 />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -43,13 +43,13 @@ export default function HomePage() {
           <AnimatedSection delay={300}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="rounded-full px-8">
-                <Link href="/the_ds_standard">
+                <Link href="/the_ds_standard2">
                   Discover the Standard
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-transparent">
-                <Link href="/products">View Products</Link>
+                <Link href="/products2">View Products</Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -120,7 +120,7 @@ export default function HomePage() {
                   and achieve proper balance with less strain.
                 </p>
                 <Link 
-                  href="/the_ds_standard#benefits"
+                  href="/the_ds_standard2#benefits"
                   className="inline-flex items-center mt-6 text-primary font-medium hover:gap-2 transition-all"
                 >
                   Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -142,7 +142,7 @@ export default function HomePage() {
                   experiencing immediate comfort and control.
                 </p>
                 <Link 
-                  href="/the_ds_standard#easy"
+                  href="/the_ds_standard2#easy"
                   className="inline-flex items-center mt-6 text-primary font-medium hover:gap-2 transition-all"
                 >
                   Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -164,7 +164,7 @@ export default function HomePage() {
                   and power is increased.
                 </p>
                 <Link 
-                  href="/the_ds_standard#power"
+                  href="/the_ds_standard2#power"
                   className="inline-flex items-center mt-6 text-primary font-medium hover:gap-2 transition-all"
                 >
                   Learn more <ArrowRight className="ml-1 h-4 w-4" />
@@ -186,7 +186,7 @@ export default function HomePage() {
                   endurance sessions into pure pleasure.
                 </p>
                 <Link 
-                  href="/donations#testimonials"
+                  href="/donations2#testimonials"
                   className="inline-flex items-center mt-6 text-primary font-medium hover:gap-2 transition-all"
                 >
                   Read testimonials <ArrowRight className="ml-1 h-4 w-4" />
@@ -381,20 +381,20 @@ export default function HomePage() {
           <AnimatedSection delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="rounded-full px-8">
-                <Link href="/products">
+                <Link href="/products2">
                   Explore Products
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-transparent">
-                <Link href="/donations">Support Our Mission</Link>
+                <Link href="/donations2">Support Our Mission</Link>
               </Button>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <Footer />
+      <Footer2 />
     </div>
   )
 }

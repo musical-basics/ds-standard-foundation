@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar2 } from "@/components/navbar2"
+import { Footer2 } from "@/components/footer2"
 import { AnimatedSection } from "@/components/animated-section"
 import { StickySection } from "@/components/sticky-section"
 import { Button } from "@/components/ui/button"
@@ -39,7 +39,7 @@ const grandPianoOptions = [
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar2 />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -166,7 +166,7 @@ export default function ProductsPage() {
                     variant={option.highlight ? "secondary" : "default"}
                     className="rounded-full w-full"
                   >
-                    <Link href="/contact_us">
+                    <Link href="/contact_us2">
                       Inquire Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -313,7 +313,7 @@ export default function ProductsPage() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="rounded-full bg-transparent">
-                  <Link href="/contact_us">
+                  <Link href="/contact_us2">
                     International Inquiries
                   </Link>
                 </Button>
@@ -385,7 +385,7 @@ export default function ProductsPage() {
 
           <AnimatedSection delay={300}>
             <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="/contact_us">
+              <Link href="/contact_us2">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -394,7 +394,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer2 />
     </div>
   )
 }

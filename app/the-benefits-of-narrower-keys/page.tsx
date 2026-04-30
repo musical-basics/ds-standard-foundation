@@ -267,6 +267,39 @@ export default function BenefitsOfNarrowerKeysPage() {
         </div>
       </section>
 
+      {/* Demonstration video */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="mb-10 text-center">
+              <p className="text-[0.65rem] uppercase tracking-[0.3em] font-medium text-primary mb-4 font-[family-name:var(--font-inter)]">
+                Demonstration
+              </p>
+              <h3 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground leading-tight">
+                The benefits of narrower keys, in motion.
+              </h3>
+            </div>
+            <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+              <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+              <div className="relative aspect-video overflow-hidden">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/VNe_H05xQ9s"
+                  title="Benefits of narrower keys"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </figure>
+            <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+              Pianists for Alternatively Sized Keyboards · Benefits of narrower keys
+            </figcaption>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Vertical hairline */}
       <div className="w-full h-24 flex justify-center items-center">
         <div className="w-px h-full bg-border" />

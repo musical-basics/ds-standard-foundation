@@ -280,6 +280,62 @@ export default function DSStandard2Page() {
             </div>
           </section>
 
+          <hr className="border-t border-border" />
+
+          {/* 5b. Demonstration: Mario Ajero on reduced-size keyboards */}
+          <section className="py-24">
+            <div className="mb-12 md:mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
+              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl italic text-primary">
+                Reduced-Size Keyboards
+              </h2>
+              <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
+                Mario Ajero, two-part demonstration
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              <AnimatedSection>
+                <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                  <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                  <div className="relative aspect-video overflow-hidden">
+                    <iframe
+                      src="https://www.youtube-nocookie.com/embed/SBfDN9DBsnk"
+                      title="Reduced-Size Keyboards Part 1"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </figure>
+                <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                  Mario Ajero · Reduced-Size Keyboards, Part 1
+                </figcaption>
+              </AnimatedSection>
+
+              <AnimatedSection delay={100}>
+                <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                  <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                  <div className="relative aspect-video overflow-hidden">
+                    <iframe
+                      src="https://www.youtube-nocookie.com/embed/yiF05uBej0c?start=116"
+                      title="Reduced-Size Keyboards Part 2"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </figure>
+                <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                  Mario Ajero · Reduced-Size Keyboards, Part 2
+                </figcaption>
+              </AnimatedSection>
+            </div>
+          </section>
+
           {/* thin centered rule */}
           <div className="w-full h-24 flex justify-center items-center">
             <div className="w-px h-full bg-border" />

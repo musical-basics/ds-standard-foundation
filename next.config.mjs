@@ -18,6 +18,11 @@ const nextConfig = {
         destination: "/history",
         permanent: true,
       },
+      {
+        source: "/the-benefits-of-narrower-keys",
+        destination: "/chris-donison-testimonial",
+        permanent: true,
+      },
     ]
   },
 }

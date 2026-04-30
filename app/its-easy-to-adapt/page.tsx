@@ -227,10 +227,10 @@ export default function ItsEasyToAdaptPage() {
               Our Story
             </Link>
             <Link
-              href="/the-benefits-of-narrower-keys"
+              href="/chris-donison-testimonial"
               className="inline-flex items-center justify-center px-10 py-4 text-xs uppercase tracking-[0.15em] font-medium text-foreground border border-foreground hover:bg-foreground hover:text-background transition-colors font-[family-name:var(--font-inter)]"
             >
-              The Benefits of Narrower Keys
+              Read Donison&rsquo;s Testimonial
             </Link>
           </div>
         </AnimatedSection>

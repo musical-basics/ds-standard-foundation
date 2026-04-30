@@ -358,7 +358,7 @@ export default function Home2Page() {
                   &lsquo;Small Hands? Try This Keyboard, You&rsquo;ll Like It&rsquo;, Piano &amp; Keyboard Magazine, July/August 1998, pp. 41 to 43.
                 </span>
                 <Link
-                  href="/the-benefits-of-narrower-keys"
+                  href="/chris-donison-testimonial"
                   className="mt-5 inline-flex items-center text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-0.5"
                 >
                   Read the full testimonial

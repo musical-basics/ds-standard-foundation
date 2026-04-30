@@ -282,19 +282,39 @@ export default function DSStandard2Page() {
 
           <hr className="border-t border-border" />
 
-          {/* 5b. Demonstration: Mario Ajero on reduced-size keyboards */}
+          {/* 5b. Demonstrations: reduced-size keyboards in motion */}
           <section className="py-24">
             <div className="mb-12 md:mb-16 flex flex-col md:flex-row justify-between md:items-end gap-4">
               <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl italic text-primary">
                 Reduced-Size Keyboards
               </h2>
               <span className="text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary font-[family-name:var(--font-inter)]">
-                Mario Ajero, two-part demonstration
+                Three demonstrations
               </span>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
               <AnimatedSection>
+                <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
+                  <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
+                  <div className="relative aspect-video overflow-hidden">
+                    <iframe
+                      src="https://www.youtube-nocookie.com/embed/VNe_H05xQ9s"
+                      title="Benefits of narrower keys"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </figure>
+                <figcaption className="mt-4 text-[0.65rem] text-foreground/60 uppercase tracking-[0.2em] pl-2 font-[family-name:var(--font-inter)]">
+                  PASK · Benefits of narrower keys
+                </figcaption>
+              </AnimatedSection>
+
+              <AnimatedSection delay={100}>
                 <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
                   <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
                   <div className="relative aspect-video overflow-hidden">
@@ -314,7 +334,7 @@ export default function DSStandard2Page() {
                 </figcaption>
               </AnimatedSection>
 
-              <AnimatedSection delay={100}>
+              <AnimatedSection delay={200}>
                 <figure className="relative bg-card p-3 md:p-4 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]">
                   <div className="absolute inset-2 border border-border/40 pointer-events-none z-10" />
                   <div className="relative aspect-video overflow-hidden">
@@ -821,7 +841,7 @@ export default function DSStandard2Page() {
                       <span aria-hidden>&rarr;</span>
                     </a>
                     <Link
-                      href="/the-benefits-of-narrower-keys"
+                      href="/chris-donison-testimonial"
                       className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] font-medium text-primary hover:text-foreground transition-colors font-[family-name:var(--font-inter)] border-b border-primary/40 hover:border-foreground pb-1"
                     >
                       Read Donison&rsquo;s full testimonial
